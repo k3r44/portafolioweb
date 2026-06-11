@@ -1,9 +1,8 @@
-<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Hector Cu | Systems & Infrastructure</title>
+    <title>Hector Cu | Systems & Infrastructure</title>
     <style>
         /* Reglas Base - El Entorno Oscuro */
         body {
@@ -37,7 +36,7 @@
             font-size: 1.3rem;
             margin-top: 40px;
             margin-bottom: 20px;
-            border-bottom: 1px solid #21262d; /* Una línea divisoria sutil, casi invisible */
+            border-bottom: 1px solid #21262d;
             padding-bottom: 8px;
         }
 
@@ -48,9 +47,9 @@
             margin-top: 0;
         }
 
-        /* Los Bloques de los Proyectos (Tratados como documentación) */
-        .project-card {
-            margin-bottom: 35px;
+        /* Los Bloques de los Proyectos / Educación */
+        .project-card, .edu-card {
+            margin-bottom: 45px;
         }
 
         .project-title {
@@ -59,33 +58,98 @@
             margin-bottom: 10px;
         }
 
-        /* Estructura de "Problema / Solución" en formato lista limpia */
+        /* Estructura de "Problema / Solución" */
         .meta-label {
             font-family: ui-monospace, monospace;
             color: #8b949e;
             font-size: 0.9rem;
             display: inline-block;
-            width: 100px;
+            width: 110px;
+            vertical-align: top;
         }
 
         .meta-content {
-            margin-left: 0;
-            display: inline;
+            margin: 0;
+            display: inline-block;
+            width: calc(100% - 120px);
+            font-size: 0.95rem;
         }
 
-        .project-section {
-            margin-bottom: 8px;
-            font-size: 0.95rem;
+        .project-section, .edu-section {
+            margin-bottom: 12px;
         }
 
         /* Bloque de código o tags de tecnología */
         .tech-stack {
             font-family: ui-monospace, monospace;
-            color: #58a6ff; /* Un azul suave de link técnico, único acento de color */
+            color: #58a6ff;
             font-size: 0.85rem;
             background: #161b22;
             padding: 4px 8px;
             border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 6px;
+            margin-right: 4px;
+        }
+
+        /* Tecnologías en texto plano monospace */
+        .tech-list {
+            font-family: ui-monospace, monospace;
+            color: #8b949e;
+            font-size: 0.9rem;
+        }
+
+        /* Estilo específico para la sección de educación */
+        .edu-time {
+            font-family: ui-monospace, monospace;
+            color: #58a6ff;
+            font-size: 0.9rem;
+            display: inline-block;
+            width: 110px;
+            vertical-align: top;
+        }
+
+        /* Contenedor interno de imágenes adjuntas */
+        .evidence-container {
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #121419;
+            border: 1px dashed #21262d;
+            border-radius: 6px;
+        }
+
+        .evidence-block {
+            margin-bottom: 20px;
+        }
+
+        .evidence-block:last-child {
+            margin-bottom: 0;
+        }
+
+        .evidence-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            border: 1px solid #21262d;
+            margin-top: 8px;
+        }
+
+        summary {
+            cursor: pointer;
+            font-family: ui-monospace, monospace;
+            font-size: 0.9rem;
+            color: #58a6ff;
+            user-select: none;
+        }
+        
+        summary:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: 60px;
+            border-top: 1px solid #21262d;
+            padding-top: 20px;
         }
     </style>
 </head>
@@ -96,15 +160,224 @@
         <header>
             <h1>Hector Cu</h1>
             <p class="subtitle">`Systems & Infrastructure Engineering / Security Enthusiast`</p>
-            <p>Diseño y conecto sistemas desde la lógica, la seguridad y la eficiencia. Creo en las soluciones limpias y robustas, donde la calidad de la arquitectura habla más fuerte que los adornos visuales.</p>
+            <p>Diseño, despliego y conecto sistemas distribuidos. Mi enfoque se centra en infraestructura, observabilidad, automatización y seguridad, utilizando la tecnología como herramienta para construir plataformas confiables y mantenibles.</p>
         </header>
 
         <main>
             <h2>/ proyectos_principales</h2>
             
-            <p style="color: #8b949e; font-style: italic;">[Listo para cargar la arquitectura de tus sistemas...]</p>
+            <div class="project-card">
+                <h3 class="project-title">ECOSISTEMA CLOUD E INTEGRACIÓN IOT / AI (TEMPUS COFFEE)</h3>
+                <p class="subtitle">Diseño de infraestructura en la nube, pipelines de comunicación distribuida y consistencia de datos para hardware automatizado.</p>
+                
+                <div class="project-section">
+                    <span class="meta-label">Problema:</span>
+                    <div class="meta-content">Controlar de forma remota y automatizada la inyección de información y respuesta de un sistema embebido en tiempo real, garantizando la seguridad en la persistencia de datos y mitigando la naturaleza probabilística e inconsistente de las respuestas de modelos de lenguaje para evitar desbordamientos o fallas.</div>
+                </div>
+
+                <div class="project-section">
+                    <span class="meta-label">Solución:</span>
+                    <div class="meta-content">Diseño e implementación de la arquitectura del servidor cloud, bases de datos y métodos de comunicación distribuida. Construcción del backend securizado para el control de acceso y transacciones. Integración con modelos existentes de inteligencia artificial forzando esquemas de respuesta estrictos mediante mecanismos de sanitización avanzada. Orquestación de comandos de consola persistentes para procesar ventanas críticas de tiempo real en la rutina de automatización del sistema embebido.</div>
+                </div>
+
+                <div class="project-section">
+                    <span class="meta-label">Lógica/Flujo:</span>
+                    <div class="meta-content" style="font-family: ui-monospace, monospace; font-size: 0.9rem; color: #c9d1d9;">
+                        Usuario & Asistente de Voz -> API REST (Laravel) -> Sanitización/Validación de Prompt -> Canal de Mensajería MQTT -> Hardware Remoto.
+                    </div>
+                </div>
+
+                <div class="project-section">
+                    <span class="meta-label">Capacidades:</span>
+                    <div class="meta-content">
+                        <span class="tech-stack">Arquitecturas tolerantes a fallos frente a IA</span>
+                        <span class="tech-stack">Orquestación de Daemons en Background</span>
+                        <span class="tech-stack">Protocolos de Mensajería Asíncrona (MQTT)</span>
+                        <span class="tech-stack">Persistencia y Seguridad de APIs (Sanctum)</span>
+                    </div>
+                </div>
+
+                <div class="project-section">
+                    <span class="meta-label">Tecnologías:</span>
+                    <div class="meta-content tech-list">Laravel 11, Laravel Sanctum, MQTT, Gemini API, MySQL, Artisan CLI.</div>
+                </div>
+
+                <div class="project-section" style="margin-top: 15px;">
+                    <details>
+                        <summary>[+] Ver Documentación Gráfica y Planos de Ingeniería</summary>
+                        <div class="evidence-container">
+                            <div class="evidence-block">
+                                <p style="color: #8b949e; font-family: ui-monospace, monospace; font-size: 0.85rem; margin: 0;">// Fig 1.1 - Diagrama de flujo y arquitectura del ecosistema cloud:</p>
+                                <img src="https://i.imgur.com/8CYnpdY.png" alt="Arquitectura Cloud MQTT" class="evidence-img">
+                            </div>
+                            <div class="evidence-block">
+                                <p style="color: #8b949e; font-family: ui-monospace, monospace; font-size: 0.85rem; margin: 0;">// Fig 1.2 - Planos de ingeniería de integración de hardware (Autoría propia):</p>
+                                <img src="https://i.imgur.com/5h6PEkO.png" alt="Planos de Ingeniería de Hardware" class="evidence-img">
+                            </div>
+                            <div class="evidence-block">
+                                <p style="color: #8b949e; font-family: ui-monospace, monospace; font-size: 0.85rem; margin: 0;">// Fig 1.3 - Interfaz gráfica de control frontend:</p>
+                                <img src="https://i.imgur.com/HVesEwt.png" alt="Frontend Tempus Coffee" class="evidence-img">
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3 class="project-title">VIRTUAL CLIENT / AUTOMATIZACIÓN DE ENTORNOS VIRTUALIZADOS</h3>
+                <p class="subtitle">Abstracción y gestión de recursos a nivel de sistema operativo para hipervisores nativos de Linux.</p>
+                
+                <div class="project-section">
+                    <span class="meta-label">Problema:</span>
+                    <div class="meta-content">La complejidad técnica y los riesgos de seguridad críticos asociados a la administración directa de hipervisores en entornos locales, lo cual suele requerir la elevación constante de privilegios de superusuario (root) o ejecuciones manuales ineficientes por consola de comandos.</div>
+                </div>
+
+                <div class="project-section">
+                    <span class="meta-label">Solución:</span>
+                    <div class="meta-content">Desarrollo de un sistema modular de backend encargado del aprovisionamiento, arranque automatizado y control del ciclo de vida de instancias virtuales mediante la interacción directa con la API de bajo nivel de libvirt. Implementación de técnicas de parsing de datos estructurados para extraer configuraciones directamente desde archivos XML del hipervisor. El pilar de seguridad se fundamentó en el aislamiento de privilegios, delegando el control técnico a grupos nativos del sistema operativo (libvirt y kvm), mitigando por completo la necesidad de invocar comandos como usuario root.</div>
+                </div>
+
+                <div class="project-section">
+                    <span class="meta-label">Capacidades:</span>
+                    <div class="meta-content">
+                        <span class="tech-stack">Interacción con APIs de Bajo Nivel (libvirt/KVM)</span>
+                        <span class="tech-stack">Principio de Mínimo Privilegio (Seguridad a Nivel de OS)</span>
+                        <span class="tech-stack">Parsing de Estructuras de Datos Complejas (XML)</span>
+                        <span class="tech-stack">Gestión Inteligente de Recursos de Hardware</span>
+                    </div>
+                </div>
+
+                <div class="project-section">
+                    <span class="meta-label">Tecnologías:</span>
+                    <div class="meta-content tech-list">Python, PyQt, libvirt API, KVM, XML Architecture, Linux CLI.</div>
+                </div>
+
+                <div class="project-section" style="margin-top: 15px;">
+                    <details>
+                        <summary>[+] Ver Capturas de Interfaz y Lógica de Abstracción</summary>
+                        <div class="evidence-container">
+                            <div class="evidence-block">
+                                <p style="color: #8b949e; font-family: ui-monospace, monospace; font-size: 0.85rem; margin: 0;">// Fig 2.1 - Diagrama de arquitectura del cliente y backend:</p>
+                                <img src="https://i.imgur.com/eMKJnuF.png" alt="Diagrama de Arquitectura de Virtual Client" class="evidence-img">
+                            </div>
+                            <div class="evidence-block">
+                                <p style="color: #8b949e; font-family: ui-monospace, monospace; font-size: 0.85rem; margin: 0;">// Fig 2.2 - Panel del software para administración de Máquinas Virtuales:</p>
+                                <img src="https://i.imgur.com/dEFFFmI.png" alt="Virtual Client GUI Interface" class="evidence-img">
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3 class="project-title">ORQUESTACIÓN DE INFRAESTRUCTURA MULTI-NODO Y STACK DE OBSERVABILIDAD</h3>
+                <p class="subtitle">Despliegue y correlación de métricas en entornos Linux en entornos Cloud.</p>
+                
+                <div class="project-section">
+                    <span class="meta-label">Problema:</span>
+                    <div class="meta-content">La ausencia de visibilidad y monitoreo centralizado sobre métricas de rendimiento (CPU, memoria, red, almacenamiento) de servicios empresariales distribuidos en la nube operando sobre distintas distribuciones de sistemas operativos, impidiendo aislar cuellos de botella de red o fallas de software antes de que impacten en producción.</div>
+                </div>
+
+                <div class="project-section">
+                    <span class="meta-label">Solución:</span>
+                    <div class="meta-content">Diseño y aprovisionamiento de una arquitectura multi-nodo en Google Cloud Platform (GCP) utilizando servidores Linux, utilizando un nodo central enfocado en el stack de observabilidad. Implementación de agentes de recolección de métricas persistentes. Centralización de logs y telemetría con canalización hacia dashboards interactivos y sistemas de alertas automatizadas.</div>
+                </div>
+
+                <div class="project-section">
+                    <span class="meta-label">Retos Resueltos:</span>
+                    <div class="meta-content">Bastionado de permisos en directorios críticos (/opt), configuración de políticas estrictas de firewalls y enrutamiento interno mediante tags en la VPC de Cloud para permitir la comunicación segura entre puertos específicos.</div>
+                </div>
+
+                <div class="project-section">
+                    <span class="meta-label">Capacidades:</span>
+                    <div class="meta-content">
+                        <span class="tech-stack">Administración Avanzada de Linux (Ubuntu, Oracle, Rocky)</span>
+                        <span class="tech-stack">Arquitecturas de Observabilidad (Prometheus / Grafana)</span>
+                        <span class="tech-stack">Seguridad de Redes, Firewalls y Cloud VPC (GCP)</span>
+                        <span class="tech-stack">Endurecimiento de Servidores de Aplicaciones</span>
+                    </div>
+                </div>
+
+                <div class="project-section">
+                    <span class="meta-label">Tecnologías:</span>
+                    <div class="meta-content tech-list">Google Cloud Platform (GCP), Prometheus, Grafana, Node Exporter, JMX Exporter, Apache Tomcat, Payara 6, systemd, Linux (Ubuntu/Rocky/Oracle).</div>
+                </div>
+
+                <div class="project-section" style="margin-top: 15px;">
+                    <details>
+                        <summary>[+] Ver Telemetría y Dashboards Operacionales</summary>
+                        <div class="evidence-container">
+                            <div class="evidence-block">
+                                <p style="color: #8b949e; font-family: ui-monospace, monospace; font-size: 0.85rem; margin: 0;">// Fig 3.1 - Arquitectura de red y nodos de observabilidad (GCP):</p>
+                                <img src="https://i.imgur.com/qq0LzWN.png" alt="Arquitectura del Stack de Monitoreo" class="evidence-img">
+                            </div>
+                            <div class="evidence-block">
+                                <p style="color: #8b949e; font-family: ui-monospace, monospace; font-size: 0.85rem; margin: 0;">// Fig 3.2 - Panel de Grafana correlacionando telemetría de la infraestructura multi-nodo:</p>
+                                <img src="https://i.imgur.com/SAuv549.png" alt="Grafana Telemetry Dashboard 1" class="evidence-img">
+                            </div>
+                            <div class="evidence-block">
+                                <p style="color: #8b949e; font-family: ui-monospace, monospace; font-size: 0.85rem; margin: 0;">// Fig 3.3 - Monitoreo detallado de consumo de recursos por instancia:</p>
+                                <img src="https://i.imgur.com/YJ1fjzV.png" alt="Grafana Telemetry Dashboard 2" class="evidence-img">
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <h2>/ educacion_y_certificaciones</h2>
+
+            <div class="edu-card">
+                <div class="edu-section">
+                    <span class="edu-time">2023 — Pres.</span>
+                    <div class="meta-content">
+                        <strong style="color: #ffffff;">Ingeniería en Sistemas de Información y Ciencias de la Computación</strong><br>
+                        <span style="color: #8b949e;">Universidad Mariano Gálvez de Guatemala (8vo Semestre)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="edu-card">
+                <div class="edu-section">
+                    <span class="edu-time">[En Curso]</span>
+                    <div class="meta-content">
+                        <strong style="color: #ffffff;">CompTIA Security+</strong><br>
+                        <span style="color: #8b949e;">Preparación activa para la certificación internacional en seguridad de la información.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="edu-card">
+                <div class="edu-section">
+                    <span class="edu-time">Certificado</span>
+                    <div class="meta-content">
+                        <strong style="color: #ffffff;">Data Engineer Associate & SQL Associate</strong><br>
+                        <span style="color: #8b949e;">DataCamp (Validación académica de fundamentos robustos en modelado, consulta y estructuración de bases de datos relacionales).</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="edu-card">
+                <div class="edu-section">
+                    <span class="edu-time">2021 — 2022</span>
+                    <div class="meta-content">
+                        <strong style="color: #ffffff;">Bachillerato en Ciencias y Letras con Orientación en Computación</strong><br>
+                        <span style="color: #8b949e;">Escuela Normal Central para Varones</span>
+                    </div>
+                </div>
+            </div>
 
         </main>
+
+        <footer>
+            <p style="font-family: ui-monospace, monospace; color: #8b949e; font-size: 0.8rem; margin-bottom: 10px;">
+                [i] Este sitio es estático, ligero y se distribuye a través de la red global de Cloudflare.
+            </p>
+            <p style="font-family: ui-monospace, monospace; font-size: 0.85rem; margin: 0;">
+                <a href="https://github.com/k3r44" style="color: #58a6ff; text-decoration: none; margin-right: 20px;">github</a>
+                <a href="https://www.linkedin.com/in/hector-cu/" style="color: #58a6ff; text-decoration: none; margin-right: 20px;">linkedin</a>
+                <a href="mailto:cugarciahector@gmail.com" style="color: #58a6ff; text-decoration: none;">email</a>
+            </p>
+        </footer>
 
     </div>
 
