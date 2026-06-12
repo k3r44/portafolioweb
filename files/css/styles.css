@@ -1,0 +1,545 @@
+/* ============================================
+   Hector Cu | Portfolio Styles
+   Premium Engineering Interface (Grid & Custom Fonts)
+   ============================================ */
+
+/* === BASE === */
+html { scroll-behavior: smooth; }
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+    background-color: #0a0c10;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 40px 40px; 
+    background-attachment: fixed;
+    color: #e6edf3;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    line-height: 1.7; 
+    margin: 0;
+    padding: 50px 20px;
+}
+
+/* 1. CONTENEDOR MÁS ANCHO PARA MÁS PRESENCIA */
+.container {
+    max-width: 1080px; 
+    margin: 0 auto;
+}
+
+/* === TIPOGRAFÍA TÉCNICA === */
+h1, h2, h3, .meta-label, .tech-stack, .flow-text, summary, .btn-github, .edu-time, .cert-status, .availability-badge, .metrics-bar, .carousel-indicator {
+    font-family: 'Fira Code', monospace;
+}
+
+h1, h2, h3 { font-weight: 600; }
+
+h1 {
+    font-size: 2.4rem; 
+    margin-bottom: 5px;
+    background: linear-gradient(135deg, #ffffff 0%, #8b949e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -1px;
+}
+
+h2 {
+    font-size: 1.4rem;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08); 
+    padding-bottom: 12px;
+    color: #c9d1d9;
+}
+
+.subtitle {
+    color: #8b949e;
+    font-size: 1.05rem;
+    margin: 0;
+    font-family: 'Fira Code', monospace;
+}
+
+.subtitle::before {
+    content: "guest@hector-cu:~$ ";
+    color: #3fb950;
+    font-weight: 500;
+}
+
+.subtitle::after {
+    content: "▋";
+    color: #3fb950;
+    margin-left: 2px;
+    animation: blink-cursor 1.2s steps(2, start) infinite;
+}
+
+@keyframes blink-cursor { to { visibility: hidden; } }
+
+/* === HEADER === */
+header {
+    margin-bottom: 20px;
+    animation: systemRender 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.bio {
+    color: #c9d1d9;
+    font-size: 1rem;
+    margin-top: 20px;
+    margin-bottom: 0;
+    max-width: 800px; /* Ensanchado un poco también para coincidir con la página */
+}
+
+/* === MÉTRICAS ANCLA === */
+.metrics-bar {
+    font-size: 0.85rem;
+    color: #58a6ff;
+    background: linear-gradient(90deg, rgba(18, 20, 25, 0.9) 0%, rgba(13, 15, 18, 0.5) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
+    padding: 12px 20px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
+    opacity: 0;
+    animation: systemRender 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation-delay: 0.1s;
+}
+
+.metrics-divider { color: #30363d; }
+
+/* === BADGE DE DISPONIBILIDAD === */
+.availability-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.82rem;
+    color: #3fb950;
+    background-color: rgba(63, 185, 80, 0.08); 
+    border: 1px solid rgba(63, 185, 80, 0.3);
+    border-radius: 20px;
+    padding: 6px 16px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px rgba(63, 185, 80, 0.05); 
+}
+
+.availability-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #3fb950;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #3fb950;
+    animation: pulse-dot 2s ease-in-out infinite;
+    flex-shrink: 0;
+}
+
+@keyframes pulse-dot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50%      { opacity: 0.4; transform: scale(0.8); }
+}
+
+/* === LINKS SOCIALES === */
+.social-links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+    opacity: 0;
+    animation: systemRender 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation-delay: 0.15s;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    color: #8b949e; 
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    padding: 8px 18px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.social-link:hover {
+    color: #58a6ff; 
+    border-color: #58a6ff;
+    background-color: rgba(88, 166, 255, 0.08);
+    transform: translateY(-2px); 
+    box-shadow: 0 4px 12px rgba(88, 166, 255, 0.15);
+}
+
+/* === TARJETAS DE PROYECTO === */
+.project-card {
+    background: linear-gradient(160deg, #12151a 0%, #0a0c10 100%); 
+    border: 1px solid rgba(255, 255, 255, 0.08); 
+    border-radius: 12px; 
+    padding: 35px; /* Aumentado ligeramente para el nuevo ancho */
+    margin-bottom: 40px;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.project-card:hover {
+    border-color: rgba(88, 166, 255, 0.3); 
+    background: linear-gradient(160deg, #151a23 0%, #0a0c10 100%);
+    transform: translateY(-5px) scale(1.01); 
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.9), 0 0 25px rgba(88, 166, 255, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.project-title {
+    color: #ffffff;
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    font-size: 0.72rem;
+    font-weight: 500;
+    padding: 2px 10px;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.tag-cloud   { background: rgba(56, 139, 253, 0.1);  color: #79c0ff; border-color: rgba(56, 139, 253, 0.2); }
+.tag-iot     { background: rgba(63, 185, 80, 0.1);   color: #56d364; border-color: rgba(63, 185, 80, 0.2);  }
+.tag-infra   { background: rgba(139, 148, 158, 0.1); color: #8b949e; border-color: rgba(139, 148, 158, 0.2);}
+.tag-linux   { background: rgba(210, 168, 255, 0.1); color: #d2a8ff; border-color: rgba(210, 168, 255, 0.2);}
+.tag-sec     { background: rgba(255, 123, 114, 0.1); color: #ff7b72; border-color: rgba(255, 123, 114, 0.2);}
+.tag-ai      { background: rgba(210, 168, 255, 0.1); color: #d2a8ff; border-color: rgba(210, 168, 255, 0.2);}
+
+/* 2. LAYOUT DIVIDIDO (PROPORCIÓN 1:1.5) */
+.project-split {
+    display: grid;
+    /* 1 fracción para texto, 1.5 fracciones para imagen (Carrusel 50% más ancho) */
+    grid-template-columns: 1fr 1.5fr; 
+    gap: 35px; /* Más espacio entre columnas */
+    align-items: start;
+    margin-top: 15px;
+}
+
+.project-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.project-section {
+    display: flex;
+    flex-direction: column; /* Apilamos el título y texto en la misma columna de información para que quede más compacto */
+    margin-bottom: 5px;
+}
+
+.meta-label {
+    color: #79c0ff; 
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 4px;
+    text-transform: uppercase; 
+    letter-spacing: 0.5px;
+    opacity: 0.9;
+}
+
+.meta-content {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #c9d1d9; 
+}
+
+.tech-stack {
+    color: #a5d6ff;
+    font-size: 0.8rem;
+    background: rgba(88, 166, 255, 0.08);
+    padding: 5px 12px;
+    border-radius: 6px;
+    display: inline-block;
+    margin-bottom: 8px;
+    margin-right: 8px;
+    border: 1px solid rgba(88, 166, 255, 0.15);
+}
+
+.tech-list { color: #8b949e; font-size: 0.9rem; }
+
+.flow-text {
+    font-size: 0.85rem;
+    color: #a5d6ff; 
+    background: rgba(0,0,0,0.3);
+    padding: 10px 14px;
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+/* === CARRUSEL DE IMÁGENES INTERACTIVO === */
+.project-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.carousel-container {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.carousel-track {
+    display: flex;
+    width: 100%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 15px 45px; /* Espacio generoso lateral para que no toque las flechas */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 3. AUMENTAMOS EL TAMAÑO MÁXIMO DE LA IMAGEN */
+.carousel-img {
+    max-width: 100%;
+    max-height: 350px; /* Pasó de 200px a 350px para ser imponente */
+    width: auto;
+    height: auto;
+    object-fit: contain; 
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3); 
+    display: block;
+}
+
+/* Botones del Carrusel */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(33, 38, 45, 0.9);
+    color: #8b949e;
+    border: 1px solid rgba(255,255,255,0.1);
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    padding: 0;
+    font-size: 16px;
+}
+
+.carousel-btn:hover {
+    background: #30363d;
+    color: #58a6ff;
+    border-color: #58a6ff;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-btn.prev { left: 8px; }
+.carousel-btn.next { right: 8px; }
+
+.carousel-indicator {
+    font-size: 0.72rem;
+    color: #8b949e;
+    text-align: center;
+    opacity: 0.8;
+}
+
+/* === BOTÓN GITHUB === */
+.btn-github {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 25px;
+    font-size: 0.85rem;
+    color: #58a6ff;
+    background-color: rgba(88, 166, 255, 0.08); 
+    border: 1px solid rgba(88, 166, 255, 0.3);
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.btn-github:hover {
+    background-color: #58a6ff;
+    color: #0f1115; 
+    border-color: #58a6ff;
+    box-shadow: 0 0 15px rgba(88, 166, 255, 0.4); 
+    transform: scale(1.02); 
+}
+
+/* === STACK TECNOLÓGICO === */
+.stack-card {
+    background: linear-gradient(160deg, #12151a 0%, #0a0c10 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08); 
+    border-radius: 12px; 
+    padding: 35px;
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.stack-card .project-section {
+    flex-direction: column; 
+    margin-bottom: 0;
+}
+
+/* === EDUCACIÓN Y CERTIFICACIONES === */
+.edu-card {
+    position: relative;
+    padding-left: 28px;
+    border-left: 1px solid rgba(255, 255, 255, 0.15); 
+    margin-bottom: 40px;
+}
+
+.edu-card::before {
+    content: "";
+    position: absolute;
+    left: -6px;
+    top: 6px;
+    width: 11px;
+    height: 11px;
+    background-color: #0a0c10;
+    border: 2px solid #58a6ff; 
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(88, 166, 255, 0.5); 
+}
+
+.edu-section {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.edu-time {
+    font-size: 0.88rem;
+    width: 140px;
+    flex-shrink: 0;
+    padding-top: 3px;
+}
+
+.edu-flex-container {
+    display: flex;
+    align-items: center; 
+    gap: 16px;
+    flex-grow: 1;
+}
+
+.edu-logo {
+    width: 48px;
+    height: 48px;
+    object-fit: contain; 
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    padding: 4px;
+    flex-shrink: 0;
+}
+
+.edu-name {
+    color: #ffffff;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.05rem;
+}
+
+.edu-sub {
+    color: #8b949e;
+    font-size: 0.95rem;
+}
+
+.cert-status {
+    display: inline-block;
+    font-size: 0.72rem;
+    padding: 3px 10px;
+    border-radius: 12px;
+    margin-left: 10px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+}
+
+.cert-status.in-progress { background: rgba(255, 166, 87, 0.1); color: #ffa657; border: 1px solid rgba(255, 166, 87, 0.2); }
+.cert-status.done { background: rgba(63, 185, 80, 0.1); color: #3fb950; border: 1px solid rgba(63, 185, 80, 0.2); }
+
+/* === FOOTER === */
+footer {
+    margin-top: 70px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+.footer-note {
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+    color: #8b949e;
+}
+
+/* === ANIMACIÓN DE CARGA EN CASCADA === */
+@keyframes systemRender {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h2 { opacity: 0; animation: systemRender 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 0.2s; }
+.project-card:nth-of-type(1) { opacity: 0; animation: systemRender 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 0.3s; }
+.project-card:nth-of-type(2) { opacity: 0; animation: systemRender 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 0.4s; }
+.project-card:nth-of-type(3) { opacity: 0; animation: systemRender 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 0.5s; }
+.stack-card, .edu-card { opacity: 0; animation: systemRender 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 0.6s; }
+
+/* === RESPONSIVE MOBILE === */
+@media (max-width: 1024px) {
+    .project-split {
+        grid-template-columns: 1fr; /* Si la pantalla no es tan grande, se apilan para no aplastar el texto */
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container { max-width: 100%; }
+    .project-section, .edu-section { flex-direction: column; }
+    .meta-label, .edu-time { width: 100%; margin-bottom: 8px; }
+    
+    .carousel-img { max-height: 250px; }
+    .edu-flex-container { align-items: flex-start; }
+}
+
+@media (max-width: 480px) {
+    body { padding: 24px 16px; }
+    h1 { font-size: 2rem; }
+    .project-card { padding: 22px; }
+    .metrics-bar { flex-direction: column; align-items: center; text-align: center; }
+    .metrics-divider { display: none; }
+    .stack-card { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hector Cu | Systems & Infrastructure</title>
+
+    <link rel="icon" type="image/svg+xml" href="./images/favicon.svg">
+
+    <meta property="og:type"        content="website">
+    <meta property="og:title"       content="Hector Cu | Systems & Infrastructure">
+    <meta property="og:description" content="Ingeniero de Sistemas enfocado en arquitectura cloud, observabilidad y ciberseguridad. 3 sistemas en producción sobre GCP, libvirt y Laravel.">
+    <meta property="og:url"         content="https://portafolio.cugarciahector.workers.dev/">
+    <meta property="og:image"       content="https://i.imgur.com/SAuv549.png">
+
+    <meta name="twitter:card"        content="summary_large_image">
+    <meta name="twitter:title"       content="Hector Cu | Systems & Infrastructure">
+    <meta name="twitter:description" content="Ingeniero de Sistemas enfocado en arquitectura cloud, observabilidad y ciberseguridad.">
+    <meta name="twitter:image"       content="https://i.imgur.com/SAuv549.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <div class="availability-badge">
+                <span class="availability-dot"></span>
+                disponible para oportunidades
+            </div>
+
+            <h1>Hector Cu</h1>
+            <p class="subtitle">`Systems & Infrastructure Engineering / Security Enthusiast`</p>
+            <p class="bio">
+                Diseño, despliego y conecto sistemas distribuidos. Mi enfoque se centra en
+                infraestructura, observabilidad, automatización y seguridad, utilizando la
+                tecnología como herramienta para construir plataformas confiables y mantenibles.
+            </p>
+
+            <div class="metrics-bar">
+                <span>[ 3 Sistemas en Producción ]</span>
+                <span class="metrics-divider">|</span>
+                <span>[ +6 Tecnologías Cloud / Infra ]</span>
+                <span class="metrics-divider">|</span>
+                <span>[ Enfoque Security-First ]</span>
+            </div>
+
+            <div class="social-links">
+                <a href="https://github.com/k3r44"               target="_blank" class="social-link">[/] github</a>
+                <a href="https://www.linkedin.com/in/hector-cu/" target="_blank" class="social-link">[in] linkedin</a>
+                <a href="mailto:cugarciahector@gmail.com"                        class="social-link">[@] email</a>
+            </div>
+        </header>
+
+        <main>
+            <h2>/ proyectos_principales</h2>
+
+            <div class="project-card">
+                <h3 class="project-title">
+                    ORQUESTACIÓN Y STACK DE OBSERVABILIDAD
+                    <span class="tag tag-infra">Infraestructura</span>
+                    <span class="tag tag-cloud">Cloud</span>
+                    <span class="tag tag-sec">Security</span>
+                </h3>
+                <p class="subtitle" style="margin-bottom: 20px;">Despliegue y correlación de métricas en entornos Linux multi-nodo sobre GCP.</p>
+
+                <div class="project-split">
+                    <div class="project-info">
+                        <div class="project-section">
+                            <span class="meta-label">Problema:</span>
+                            <p class="meta-content">Ausencia de visibilidad centralizada sobre métricas de rendimiento de servicios empresariales distribuidos en la nube sobre distintas distribuciones Linux, impidiendo aislar cuellos de botella antes de que impacten en producción.</p>
+                        </div>
+
+                        <div class="project-section">
+                            <span class="meta-label">Solución:</span>
+                            <p class="meta-content">Arquitectura multi-nodo en GCP con nodo central de observabilidad. Bastionado de permisos en directorios críticos (<code>/opt</code>), políticas estrictas de firewall y enrutamiento interno mediante VPC tags para comunicación segura entre nodos.</p>
+                        </div>
+
+                        <div class="project-section">
+                            <span class="meta-label">Capacidades:</span>
+                            <div class="meta-content">
+                                <span class="tech-stack">Administración Linux</span>
+                                <span class="tech-stack">Observabilidad (Prometheus/Grafana)</span>
+                                <span class="tech-stack">Cloud VPC & Firewalls (GCP)</span>
+                                <span class="tech-stack">Endurecimiento de Servidores</span>
+                            </div>
+                        </div>
+
+                        <div class="project-section">
+                            <span class="meta-label">Tecnologías:</span>
+                            <p class="meta-content tech-list">GCP, Prometheus, Grafana, Node Exporter, JMX Exporter, Apache Tomcat, Payara 6, systemd, Linux.</p>
+                        </div>
+                    </div>
+
+                    <div class="project-gallery">
+                        <div class="carousel-container carousel">
+                            <button class="carousel-btn prev">&#10094;</button>
+                            <div class="carousel-track">
+                                <div class="slide"><img src="https://i.imgur.com/qq0LzWN.png" alt="Arquitectura del Stack de Monitoreo" class="carousel-img"></div>
+                                <div class="slide"><img src="https://i.imgur.com/SAuv549.png" alt="Grafana Telemetry Dashboard" class="carousel-img"></div>
+                                <div class="slide"><img src="https://i.imgur.com/YJ1fjzV.png" alt="Grafana Resource Detail" class="carousel-img"></div>
+                            </div>
+                            <button class="carousel-btn next">&#10095;</button>
+                        </div>
+                        <span class="carousel-indicator">// Usa las flechas para navegar [ < > ]</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3 class="project-title">
+                    ECOSISTEMA CLOUD E INTEGRACIÓN IOT / AI — TEMPUS COFFEE
+                    <span class="tag tag-iot">IoT</span>
+                    <span class="tag tag-cloud">Cloud</span>
+                    <span class="tag tag-ai">AI</span>
+                    <span class="tag tag-sec">Security</span>
+                </h3>
+                <p class="subtitle" style="margin-bottom: 20px;">Infraestructura cloud, pipelines de comunicación distribuida y consistencia de datos para hardware automatizado.</p>
+
+                <div class="project-split">
+                    <div class="project-info">
+                        <div class="project-section">
+                            <span class="meta-label">Problema:</span>
+                            <p class="meta-content">Controlar de forma remota un sistema embebido en tiempo real, garantizando seguridad en la persistencia de datos y mitigando la naturaleza probabilística de los LLMs para evitar fallas en el hardware.</p>
+                        </div>
+
+                        <div class="project-section">
+                            <span class="meta-label">Solución:</span>
+                            <p class="meta-content">Backend securizado con Sanctum. Sanitización avanzada de prompts antes de retransmitirlos. Orquestación de daemons persistentes para procesar ventanas críticas de tiempo real vía MQTT.</p>
+                        </div>
+
+                        <div class="project-section">
+                            <span class="meta-label">Lógica/Flujo:</span>
+                            <p class="meta-content flow-text">Usuario/Voz → API REST → Sanitización → MQTT → Hardware</p>
+                        </div>
+
+                        <div class="project-section">
+                            <span class="meta-label">Tecnologías:</span>
+                            <p class="meta-content tech-list">Laravel 11, Sanctum, MQTT, Gemini API, MySQL, Artisan CLI.</p>
+                        </div>
+                    </div>
+
+                    <div class="project-gallery">
+                        <div class="carousel-container carousel">
+                            <button class="carousel-btn prev">&#10094;</button>
+                            <div class="carousel-track">
+                                <div class="slide"><img src="https://i.imgur.com/8CYnpdY.png" alt="Arquitectura Cloud MQTT" class="carousel-img"></div>
+                                <div class="slide"><img src="https://i.imgur.com/5h6PEkO.png" alt="Planos de Ingeniería de Hardware" class="carousel-img"></div>
+                                <div class="slide"><img src="https://i.imgur.com/HVesEwt.png" alt="Frontend Tempus Coffee" class="carousel-img"></div>
+                            </div>
+                            <button class="carousel-btn next">&#10095;</button>
+                        </div>
+                        <span class="carousel-indicator">// Usa las flechas para navegar [ < > ]</span>
+                    </div>
+                </div>
+
+                <a href="https://github.com/k3r44/cafetera-laravel" target="_blank" class="btn-github">[/>] Ver código fuente en GitHub</a>
+            </div>
+
+            <div class="project-card">
+                <h3 class="project-title">
+                    VIRTUAL CLIENT / AUTOMATIZACIÓN DE ENTORNOS VIRTUALIZADOS
+                    <span class="tag tag-linux">Linux</span>
+                    <span class="tag tag-sec">Security</span>
+                </h3>
+                <p class="subtitle" style="margin-bottom: 20px;">Abstracción y gestión de recursos a nivel de sistema operativo para hipervisores nativos de Linux.</p>
+
+                <div class="project-split">
+                    <div class="project-info">
+                        <div class="project-section">
+                            <span class="meta-label">Problema:</span>
+                            <p class="meta-content">Riesgos de seguridad críticos de administrar hipervisores requiriendo elevación constante de privilegios root, o ejecuciones manuales ineficientes por consola.</p>
+                        </div>
+
+                        <div class="project-section">
+                            <span class="meta-label">Solución:</span>
+                            <p class="meta-content">Sistema modular con interacción directa a la API de libvirt. Aislamiento de privilegios mediante grupos nativos del OS (<code>libvirt</code> / <code>kvm</code>), eliminando comandos root.</p>
+                        </div>
+
+                        <div class="project-section">
+                            <span class="meta-label">Tecnologías:</span>
+                            <p class="meta-content tech-list">Python, PyQt, libvirt API, KVM, XML Architecture, Linux CLI.</p>
+                        </div>
+                    </div>
+
+                    <div class="project-gallery">
+                        <div class="carousel-container carousel">
+                            <button class="carousel-btn prev">&#10094;</button>
+                            <div class="carousel-track">
+                                <div class="slide"><img src="https://i.imgur.com/eMKJnuF.png" alt="Diagrama de Arquitectura de Virtual Client" class="carousel-img"></div>
+                                <div class="slide"><img src="https://i.imgur.com/dEFFFmI.png" alt="Virtual Client GUI Interface" class="carousel-img"></div>
+                            </div>
+                            <button class="carousel-btn next">&#10095;</button>
+                        </div>
+                        <span class="carousel-indicator">// Usa las flechas para navegar [ < > ]</span>
+                    </div>
+                </div>
+
+                <a href="https://github.com/k3r44/Virtual_Client" target="_blank" class="btn-github">[/>] Ver código fuente en GitHub</a>
+            </div>
+
+            <h2>/ stack_tecnologico</h2>
+            <div class="stack-card">
+                <div class="project-section">
+                    <span class="meta-label">Infra & Cloud:</span>
+                    <p class="meta-content tech-list">Linux (Ubuntu, Rocky, Oracle), Google Cloud Platform (GCP), libvirt/KVM.</p>
+                </div>
+                <div class="project-section">
+                    <span class="meta-label">Observabilidad:</span>
+                    <p class="meta-content tech-list">Prometheus, Grafana, Node/JMX Exporters, systemd.</p>
+                </div>
+                <div class="project-section">
+                    <span class="meta-label">Lenguajes:</span>
+                    <p class="meta-content tech-list">Python, Java, C#, PHP (Laravel).</p>
+                </div>
+                <div class="project-section">
+                    <span class="meta-label">Bases de Datos:</span>
+                    <p class="meta-content tech-list">SQL, MySQL, Modelado Relacional.</p>
+                </div>
+                <div class="project-section">
+                    <span class="meta-label">Redes & Seg.:</span>
+                    <p class="meta-content tech-list">Firewalls, Cloud VPCs, MQTT, Bastionado de Servidores, APIs REST (Sanctum).</p>
+                </div>
+            </div>
+
+            <h2>/ educacion_y_certificaciones</h2>
+
+            <div class="edu-card">
+                <div class="edu-section">
+                    <span class="edu-time">2023 — Pres.</span>
+                    <div class="edu-flex-container">
+                        <img src="https://placehold.co/100x100/12151a/8b949e?text=UMG" alt="Logo UMG" class="edu-logo">
+                        <div class="meta-content">
+                            <span class="edu-name">Ingeniería en Sistemas de Información y Ciencias de la Computación</span>
+                            <span class="edu-sub">Universidad Mariano Gálvez de Guatemala — 8vo Semestre</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="edu-card">
+                <div class="edu-section">
+                    <span class="edu-time">En Curso</span>
+                    <div class="edu-flex-container">
+                        <img src="https://placehold.co/100x100/12151a/ffa657?text=SEC%2B" alt="Logo CompTIA" class="edu-logo">
+                        <div class="meta-content">
+                            <span class="edu-name">
+                                CompTIA Security+
+                                <span class="cert-status in-progress">preparando</span>
+                            </span>
+                            <span class="edu-sub">Certificación internacional en seguridad de la información.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="edu-card">
+                <div class="edu-section">
+                    <span class="edu-time">Certificado</span>
+                    <div class="edu-flex-container">
+                        <img src="https://placehold.co/100x100/12151a/3fb950?text=DC" alt="Logo DataCamp" class="edu-logo">
+                        <div class="meta-content">
+                            <span class="edu-name">
+                                Data Engineer Associate & SQL Associate
+                                <span class="cert-status done">certificado</span>
+                            </span>
+                            <span class="edu-sub">DataCamp — fundamentos de modelado, consulta y estructuración de bases de datos.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="edu-card">
+                <div class="edu-section">
+                    <span class="edu-time">2021 — 2022</span>
+                    <div class="edu-flex-container">
+                        <img src="https://placehold.co/100x100/12151a/8b949e?text=ENCV" alt="Logo Colegio" class="edu-logo">
+                        <div class="meta-content">
+                            <span class="edu-name">Bachillerato en Ciencias y Letras con Orientación en Computación</span>
+                            <span class="edu-sub">Escuela Normal Central para Varones</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <footer>
+            <p class="footer-note">
+                [i] Sitio estático distribuido a través de la red global de Cloudflare Workers.
+            </p>
+            <div class="social-links">
+                <a href="https://github.com/k3r44"               target="_blank" class="social-link">[/] github</a>
+                <a href="https://www.linkedin.com/in/hector-cu/" target="_blank" class="social-link">[in] linkedin</a>
+                <a href="mailto:cugarciahector@gmail.com"                        class="social-link">[@] email</a>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.carousel').forEach(carousel => {
+                const track = carousel.querySelector('.carousel-track');
+                const slides = Array.from(track.querySelectorAll('.slide'));
+                const nextBtn = carousel.querySelector('.next');
+                const prevBtn = carousel.querySelector('.prev');
+                let currentIndex = 0;
+
+                function updateCarousel() {
+                    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+                }
+
+                nextBtn.addEventListener('click', () => {
+                    currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
+                    updateCarousel();
+                });
+
+                prevBtn.addEventListener('click', () => {
+                    currentIndex = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
+                    updateCarousel();
+                });
+            });
+        });
+    </script>
+</body>
+</html>
