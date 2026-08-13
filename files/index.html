@@ -107,28 +107,34 @@
 
     <!-- PANELES DE DETALLE A ANCHO COMPLETO (Se muestran al hacer hover) -->
     <!-- PANELES DE DETALLE A ANCHO COMPLETO (Se muestran al hacer hover) -->
+<!-- PANELES DE DETALLE A ANCHO COMPLETO -->
 <div class="details-wrapper">
     
     <!-- Detalles Fase 1 -->
     <div id="detail-01" class="full-width-detail">
-        <!-- Estado en la esquina superior derecha -->
         <div class="detail-top-right">
             <span class="status-prefix">Estado de la fase:</span>
-            <span class="node-status started">Arquitectura y Diseño</span>
+            <!-- Asegúrate de usar la clase 'pending' para el verde -->
+            <span class="node-status pending">Arquitectura y Diseño</span>
         </div>
         
-        <!-- Contenido apilado verticalmente -->
-        <div class="detail-stacked-content">
-            <p class="meta-content desc-text"><strong>Descripción:</strong> Entorno de despliegue para aplicaciones web (staging/producción local) enfocado en estabilidad.</p>
-            
-            <div class="meta-content" style="margin: 15px 0 25px 0;">
-                <span class="tech-stack">LXC</span>
-                <span class="tech-stack">Nginx</span>
-                <span class="tech-stack">Cloudflare Tunnels</span>
+        <div class="detail-content-grid">
+            <!-- COLUMNA IZQUIERDA: Textos y Tecnologías -->
+            <div class="detail-text-col">
+                <p class="meta-content desc-text"><strong>Descripción:</strong> Entorno de despliegue para aplicaciones web (staging/producción local) enfocado en estabilidad.</p>
+                
+                <p class="meta-content" style="margin-top: 15px;"><strong>Objetivos:</strong> Simular el entorno de despliegue para páginas y aplicaciones web.</p>
+                
+                <!-- Tecnologías al final del flujo -->
+                <div class="meta-content" style="margin-top: 25px;">
+                    <span class="tech-stack">LXC</span>
+                    <span class="tech-stack">Nginx</span>
+                    <span class="tech-stack">Cloudflare Tunnels</span>
+                </div>
             </div>
-
-            <div class="detail-reserved">
-                <p class="meta-content" style="margin-bottom: 15px;"><strong>[ INFO_RESERVADA ]:</strong> Aquí podrás agregar toda la información técnica, lógica y configuración de la fase cuando lo consideres listo.</p>
+            
+            <!-- COLUMNA DERECHA: Diagrama -->
+            <div class="detail-diagram-col">
                 <div class="node-diagram">
                     <span>[ DIAGRAMA ESPECÍFICO DE LA FASE 01 ]</span>
                 </div>
@@ -140,20 +146,24 @@
     <div id="detail-02" class="full-width-detail">
         <div class="detail-top-right">
             <span class="status-prefix">Estado de la fase:</span>
-            <span class="node-status not-started">Proximamente</span>
+            <span class="node-status not-started">Próximamente</span>
         </div>
         
-        <div class="detail-stacked-content">
-            <p class="meta-content desc-text"><strong>Descripción:</strong> Stack integral para la supervisión de recursos, máquinas virtuales y contenedores en tiempo real.</p>
-            
-            <div class="meta-content" style="margin: 15px 0 25px 0;">
-                <span class="tech-stack">Prometheus</span>
-                <span class="tech-stack">Grafana</span>
+        <div class="detail-content-grid">
+            <div class="detail-text-col">
+                <p class="meta-content desc-text"><strong>Descripción:</strong> Stack integral para la supervisión de recursos, máquinas virtuales y contenedores en tiempo real.</p>
+                
+                <p class="meta-content" style="margin-top: 15px;"><strong>Objetivos:</strong> Monitoreo proactivo, recolección de métricas y visualización de logs.</p>
+                
+                <div class="meta-content" style="margin-top: 25px;">
+                    <span class="tech-stack">Prometheus</span>
+                    <span class="tech-stack">Grafana</span>
+                </div>
             </div>
-
-            <div class="detail-reserved">
+            
+            <div class="detail-diagram-col">
                 <div class="node-diagram">
-                    <span>[ PRÓXIMAMENTE: DIAGRAMA E INFORMACIÓN DEL STACK DE MONITOREO ]</span>
+                    <span>[ PRÓXIMAMENTE: DIAGRAMA E INFORMACIÓN DEL STACK ]</span>
                 </div>
             </div>
         </div>
@@ -163,18 +173,22 @@
     <div id="detail-03" class="full-width-detail">
         <div class="detail-top-right">
             <span class="status-prefix">Estado de la fase:</span>
-            <span class="node-status not-started">Proximamente</span>
+            <span class="node-status not-started">Próximamente</span>
         </div>
         
-        <div class="detail-stacked-content">
-            <p class="meta-content desc-text"><strong>Descripción:</strong> Entorno aislado (air-gapped/VLAN separada) para experimentación y despliegue de modelos LLM locales.</p>
-            
-            <div class="meta-content" style="margin: 15px 0 25px 0;">
-                <span class="tech-stack">CUDA</span>
-                <span class="tech-stack">Ollama</span>
+        <div class="detail-content-grid">
+            <div class="detail-text-col">
+                <p class="meta-content desc-text"><strong>Descripción:</strong> Entorno aislado (air-gapped/VLAN separada) para experimentación y despliegue de modelos LLM locales.</p>
+                
+                <p class="meta-content" style="margin-top: 15px;"><strong>Objetivos:</strong> Alojar servicios de IA sin exposición externa garantizando privacidad de datos.</p>
+                
+                <div class="meta-content" style="margin-top: 25px;">
+                    <span class="tech-stack">CUDA</span>
+                    <span class="tech-stack">Ollama</span>
+                </div>
             </div>
-
-            <div class="detail-reserved">
+            
+            <div class="detail-diagram-col">
                 <div class="node-diagram">
                     <span>[ PRÓXIMAMENTE: DIAGRAMA E INFORMACIÓN DEL SANDBOX IA ]</span>
                 </div>
@@ -183,44 +197,6 @@
     </div>
 
 </div>
-
-        <!-- Detalles Fase 2 -->
-        <div id="detail-02" class="full-width-detail">
-            <div class="detail-split">
-                <div class="detail-info">
-                    <p class="meta-content"><strong>Descripción:</strong> Stack integral para la supervisión de recursos, máquinas virtuales y contenedores en tiempo real.</p>
-                    <div class="meta-content" style="margin-top: 15px;">
-                        <span class="tech-stack">Prometheus</span>
-                        <span class="tech-stack">Grafana</span>
-                    </div>
-                </div>
-                <div class="detail-reserved">
-                    <div class="node-diagram">
-                        <span>[ PRÓXIMAMENTE: DIAGRAMA E INFORMACIÓN DEL STACK DE MONITOREO ]</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Detalles Fase 3 -->
-        <div id="detail-03" class="full-width-detail">
-            <div class="detail-split">
-                <div class="detail-info">
-                    <p class="meta-content"><strong>Descripción:</strong> Entorno aislado (air-gapped/VLAN separada) para experimentación y despliegue de modelos LLM locales.</p>
-                    <div class="meta-content" style="margin-top: 15px;">
-                        <span class="tech-stack">CUDA</span>
-                        <span class="tech-stack">Ollama</span>
-                    </div>
-                </div>
-                <div class="detail-reserved">
-                    <div class="node-diagram">
-                        <span>[ PRÓXIMAMENTE: DIAGRAMA E INFORMACIÓN DEL SANDBOX IA ]</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
 
     <!-- Diagrama base que siempre está visible al fondo -->
     <div class="homelab-diagram">
