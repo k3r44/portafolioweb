@@ -492,6 +492,7 @@ header {
 
 .cert-status.in-progress { background: rgba(255, 166, 87, 0.1); color: #ffa657; border: 1px solid rgba(255, 166, 87, 0.2); }
 .cert-status.done { background: rgba(63, 185, 80, 0.1); color: #3fb950; border: 1px solid rgba(63, 185, 80, 0.2); }
+.cert-status.not-started { background: rgba(128, 128, 128, 0.1); color: #4d4c4c; border: 1px solid rgba(128, 128, 128, 0.2); }
 
 /* === FOOTER === */
 footer {
@@ -543,4 +544,77 @@ h2 { opacity: 0; animation: systemRender 0.5s cubic-bezier(0.16, 1, 0.3, 1) forw
     .metrics-bar { flex-direction: column; align-items: center; text-align: center; }
     .metrics-divider { display: none; }
     .stack-card { grid-template-columns: 1fr; }
+}
+
+/* =========================================
+   HOMELAB GRID Y NODOS (Sub-proyectos)
+========================================= */
+.homelab-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 20px;
+}
+
+.homelab-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+}
+
+.node-card {
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid #30363d; /* Tu color de borde actual */
+    border-radius: 6px;
+    padding: 16px;
+    border-left: 3px solid #8b949e; /* Un acento visual para parecer un servidor */
+    transition: border-color 0.3s ease;
+}
+
+.node-card:hover {
+    border-color: #8b949e;
+}
+
+.node-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.node-title {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #e6edf3; /* Color de texto principal */
+    margin: 0;
+}
+
+.node-status {
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    border-radius: 12px;
+    background-color: rgba(63, 185, 80, 0.1);
+    color: #3fb950;
+    font-family: 'Fira Code', monospace;
+}
+
+.node-status.pending {
+    background-color: rgba(210, 153, 34, 0.1);
+    color: #d29922;
+}
+.node-status.not-started {
+    background-color: rgba(139, 148, 158, 0.1);
+    color: #8b949e; /* Gris claro, ideal para fondos oscuros */
+}
+
+.homelab-diagram {
+    width: 100%;
+    border: 1px dashed #5a6068;
+    padding: 40px;
+    text-align: center;
+    color: #8b949e;
+    border-radius: 6px;
+    background-color: rgba(255,255,255,0.01);
+    font-family: 'Fira Code', monospace;
 }

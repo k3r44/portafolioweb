@@ -63,45 +63,67 @@
 
                 <article class="project-card">
                     <h3 class="project-title">
-                        HOMELAB K3R4: INFRAESTRUCTURA Y LABORATORIO PERSONAL
+                        HOMELAB K3R4: Infraestructura de Laboratorio Personal
                         <span class="tag tag-infra">Infraestructura</span>
                         <span class="tag tag-linux">Linux</span>
                         <span class="tag tag-sec">Security</span>
                     </h3>
-                    <p class="subtitle" style="margin-bottom: 20px;">Clúster autogestionado enfocado en alta disponibilidad, simulación de entornos empresariales y despliegue continuo.</p>
+                    <p class="subtitle">Ecosistema base diseñado para alta disponibilidad, simulación de entornos empresariales y alojamiento de servicios críticos. <em>(Fase Actual: Diseño y Arquitectura de Red)</em></p>
 
-                    <div class="project-split">
-                        <div class="project-info">
-                            <div class="project-section">
-                                <span class="meta-label">Fase Actual:</span>
-                                <p class="meta-content">Diseño, Arquitectura de Red y Aprovisionamiento base.</p>
+                    <div class="homelab-container">
+                        
+                        <!-- Grid de Nodos / Sub-proyectos -->
+                        <div class="homelab-grid">
+                            
+                            <!-- Nodo 1 -->
+                            <div class="node-card">
+                                <div class="node-header">
+                                    <h4 class="node-title">[nodo_01] Dev_Web</h4>
+                                    <span class="node-status pending">en_fase_de_diseño</span>
+                                </div>
+                                <p class="meta-content">Entorno de despliegue para aplicaciones web (staging/producción local) enfocado en estabilidad.</p>
+                                <div class="meta-content" style="margin-top: 10px;">
+                                    <span class="tech-stack">LXC</span>
+                                    <span class="tech-stack">Nginx</span>
+                                </div>
                             </div>
 
-                            <div class="project-section">
-                                <span class="meta-label">Nodo 1 - Desarrollo Web:</span>
-                                <p class="meta-content">Entorno de despliegue para aplicaciones web (stating/producción local) enfocado en estabilidad.</p>
+                            <!-- Nodo 2 (Futuro hogar de tu stack de observabilidad) -->
+                            <div class="node-card">
+                                <div class="node-header">
+                                    <h4 class="node-title">[nodo_02] Observabilidad</h4>
+                                    <span class="node-status not-started">proximamente</span>
+                                </div>
+                                <p class="meta-content">Stack integral para la supervisión de recursos, máquinas virtuales y contenedores en tiempo real.</p>
+                                <div class="meta-content" style="margin-top: 10px;">
+                                    <span class="tech-stack">Prometheus</span>
+                                    <span class="tech-stack">Grafana</span>
+                                </div>
                             </div>
 
-                            <div class="project-section">
-                                <span class="meta-label">Nodo 2 - Observabilidad:</span>
-                                <p class="meta-content">Stack integral para la supervisión de recursos, máquinas virtuales y contenedores LXC en tiempo real.</p>
+                            <!-- Nodo 3 -->
+                            <div class="node-card">
+                                <div class="node-header">
+                                    <h4 class="node-title">[nodo_03] Sandbox_IA</h4>
+                                    <span class="node-status not-started">proximamente</span>
+                                </div>
+                                <p class="meta-content">Entorno aislado (air-gapped/VLAN separada) para experimentación y despliegue de modelos LLM locales.</p>
+                                <div class="meta-content" style="margin-top: 10px;">
+                                    <span class="tech-stack">CUDA</span>
+                                    <span class="tech-stack">Ollama</span>
+                                </div>
                             </div>
 
-                            <div class="project-section">
-                                <span class="meta-label">Nodo 3 - Sandbox IA:</span>
-                                <p class="meta-content">Entorno de pruebas aislado para la experimentación, configuración y futuro despliegue de modelos de Inteligencia Artificial.</p>
-                            </div>
                         </div>
 
-                        <div class="project-gallery">
-                            <!-- Placeholder visual para el futuro diagrama de arquitectura -->
-                            <div style="border: 1px dashed #5a6068; padding: 40px; text-align: center; color: #8b949e; border-radius: 4px; height: 100%; display: flex; align-items: center; justify-content: center; background-color: rgba(255,255,255,0.02);">
-                                <span>[ PRÓXIMAMENTE: DIAGRAMA DE TOPOLOGÍA DE RED ]</span>
-                            </div>
+                        <!-- Diagrama a ancho completo en la parte inferior -->
+                        <div class="homelab-diagram">
+                            <span>[ PRÓXIMAMENTE: TOPOLOGÍA DE RED Y ARQUITECTURA LÓGICA ]</span>
                         </div>
+                        
                     </div>
 
-                    <a href="https://github.com/k3r44/Infraestructura-homelab" target="_blank" class="btn-github">[/>] Ver documentación en GitHub</a>
+                    <a href="https://github.com/k3r44/HOMELAB_K3R4" target="_blank" class="btn-github" style="margin-top: 20px; display: inline-block;">[/>] Ver documentación base en GitHub</a>
                 </article>
             </section>
 
