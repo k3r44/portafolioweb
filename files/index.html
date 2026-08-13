@@ -55,7 +55,7 @@
         </header>
 
         <main>
-            <!-- ==========================================
+           <!-- ==========================================
                  PROYECTO INSIGNIA: HOMELAB
             =========================================== -->
             <section id="homelab" aria-labelledby="title-homelab">
@@ -63,67 +63,173 @@
 
                 <article class="project-card">
                     <h3 class="project-title">
-                        HOMELAB K3R4: Infraestructura de Laboratorio Personal
+                        HOMELAB K3R4: CLÚSTER AUTOGESTIONADO
                         <span class="tag tag-infra">Infraestructura</span>
                         <span class="tag tag-linux">Linux</span>
                         <span class="tag tag-sec">Security</span>
                     </h3>
                     <p class="subtitle">Ecosistema base diseñado para alta disponibilidad, simulación de entornos empresariales y alojamiento de servicios críticos. <em>(Fase Actual: Diseño y Arquitectura de Red)</em></p>
 
-                    <div class="homelab-container">
-                        
-                        <!-- Grid de Nodos / Sub-proyectos -->
-                        <div class="homelab-grid">
-                            
-                            <!-- Nodo 1 -->
-                            <div class="node-card">
-                                <div class="node-header">
-                                    <h4 class="node-title">[nodo_01] Dev_Web</h4>
-                                    <span class="node-status pending">en_fase_de_diseño</span>
-                                </div>
-                                <p class="meta-content">Entorno de despliegue para aplicaciones web (staging/producción local) enfocado en estabilidad.</p>
-                                <div class="meta-content" style="margin-top: 10px;">
-                                    <span class="tech-stack">LXC</span>
-                                    <span class="tech-stack">Nginx</span>
-                                </div>
-                            </div>
+                   <div class="homelab-container">
+    
+    <!-- GRID DE TARJETAS INICIALES (Solo título y estado) -->
+    <!-- GRID DE TARJETAS INICIALES -->
+<div class="homelab-grid">
+    
+    <!-- Fase 1 -->
+    <div class="node-card" data-target="detail-01">
+        <div class="card-header">
+            <span class="phase-label">// fase_01</span>
+            <span class="node-status pending">en_desarrollo</span>
+        </div>
+        <h4 class="node-title">Dev_Web</h4>
+    </div>
 
-                            <!-- Nodo 2 (Futuro hogar de tu stack de observabilidad) -->
-                            <div class="node-card">
-                                <div class="node-header">
-                                    <h4 class="node-title">[nodo_02] Observabilidad</h4>
-                                    <span class="node-status not-started">proximamente</span>
-                                </div>
-                                <p class="meta-content">Stack integral para la supervisión de recursos, máquinas virtuales y contenedores en tiempo real.</p>
-                                <div class="meta-content" style="margin-top: 10px;">
-                                    <span class="tech-stack">Prometheus</span>
-                                    <span class="tech-stack">Grafana</span>
-                                </div>
-                            </div>
+    <!-- Fase 2 -->
+    <div class="node-card" data-target="detail-02">
+        <div class="card-header">
+            <span class="phase-label">// fase_02</span>
+            <span class="node-status not-started">proximamente</span>
+        </div>
+        <h4 class="node-title">Observabilidad</h4>
+    </div>
 
-                            <!-- Nodo 3 -->
-                            <div class="node-card">
-                                <div class="node-header">
-                                    <h4 class="node-title">[nodo_03] Sandbox_IA</h4>
-                                    <span class="node-status not-started">proximamente</span>
-                                </div>
-                                <p class="meta-content">Entorno aislado (air-gapped/VLAN separada) para experimentación y despliegue de modelos LLM locales.</p>
-                                <div class="meta-content" style="margin-top: 10px;">
-                                    <span class="tech-stack">CUDA</span>
-                                    <span class="tech-stack">Ollama</span>
-                                </div>
-                            </div>
+    <!-- Fase 3 -->
+    <div class="node-card" data-target="detail-03">
+        <div class="card-header">
+            <span class="phase-label">// fase_03</span>
+            <span class="node-status not-started">proximamente</span>
+        </div>
+        <h4 class="node-title">Sandbox_IA</h4>
+    </div>
 
-                        </div>
+</div>
 
-                        <!-- Diagrama a ancho completo en la parte inferior -->
-                        <div class="homelab-diagram">
-                            <span>[ PRÓXIMAMENTE: TOPOLOGÍA DE RED Y ARQUITECTURA LÓGICA ]</span>
-                        </div>
-                        
+    <!-- PANELES DE DETALLE A ANCHO COMPLETO (Se muestran al hacer hover) -->
+    <!-- PANELES DE DETALLE A ANCHO COMPLETO (Se muestran al hacer hover) -->
+<div class="details-wrapper">
+    
+    <!-- Detalles Fase 1 -->
+    <div id="detail-01" class="full-width-detail">
+        <!-- Estado en la esquina superior derecha -->
+        <div class="detail-top-right">
+            <span class="status-prefix">Estado de la fase:</span>
+            <span class="node-status started">Arquitectura y Diseño</span>
+        </div>
+        
+        <!-- Contenido apilado verticalmente -->
+        <div class="detail-stacked-content">
+            <p class="meta-content desc-text"><strong>Descripción:</strong> Entorno de despliegue para aplicaciones web (staging/producción local) enfocado en estabilidad.</p>
+            
+            <div class="meta-content" style="margin: 15px 0 25px 0;">
+                <span class="tech-stack">LXC</span>
+                <span class="tech-stack">Nginx</span>
+                <span class="tech-stack">Cloudflare Tunnels</span>
+            </div>
+
+            <div class="detail-reserved">
+                <p class="meta-content" style="margin-bottom: 15px;"><strong>[ INFO_RESERVADA ]:</strong> Aquí podrás agregar toda la información técnica, lógica y configuración de la fase cuando lo consideres listo.</p>
+                <div class="node-diagram">
+                    <span>[ DIAGRAMA ESPECÍFICO DE LA FASE 01 ]</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Detalles Fase 2 -->
+    <div id="detail-02" class="full-width-detail">
+        <div class="detail-top-right">
+            <span class="status-prefix">Estado de la fase:</span>
+            <span class="node-status not-started">Proximamente</span>
+        </div>
+        
+        <div class="detail-stacked-content">
+            <p class="meta-content desc-text"><strong>Descripción:</strong> Stack integral para la supervisión de recursos, máquinas virtuales y contenedores en tiempo real.</p>
+            
+            <div class="meta-content" style="margin: 15px 0 25px 0;">
+                <span class="tech-stack">Prometheus</span>
+                <span class="tech-stack">Grafana</span>
+            </div>
+
+            <div class="detail-reserved">
+                <div class="node-diagram">
+                    <span>[ PRÓXIMAMENTE: DIAGRAMA E INFORMACIÓN DEL STACK DE MONITOREO ]</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Detalles Fase 3 -->
+    <div id="detail-03" class="full-width-detail">
+        <div class="detail-top-right">
+            <span class="status-prefix">Estado de la fase:</span>
+            <span class="node-status not-started">Proximamente</span>
+        </div>
+        
+        <div class="detail-stacked-content">
+            <p class="meta-content desc-text"><strong>Descripción:</strong> Entorno aislado (air-gapped/VLAN separada) para experimentación y despliegue de modelos LLM locales.</p>
+            
+            <div class="meta-content" style="margin: 15px 0 25px 0;">
+                <span class="tech-stack">CUDA</span>
+                <span class="tech-stack">Ollama</span>
+            </div>
+
+            <div class="detail-reserved">
+                <div class="node-diagram">
+                    <span>[ PRÓXIMAMENTE: DIAGRAMA E INFORMACIÓN DEL SANDBOX IA ]</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+        <!-- Detalles Fase 2 -->
+        <div id="detail-02" class="full-width-detail">
+            <div class="detail-split">
+                <div class="detail-info">
+                    <p class="meta-content"><strong>Descripción:</strong> Stack integral para la supervisión de recursos, máquinas virtuales y contenedores en tiempo real.</p>
+                    <div class="meta-content" style="margin-top: 15px;">
+                        <span class="tech-stack">Prometheus</span>
+                        <span class="tech-stack">Grafana</span>
                     </div>
+                </div>
+                <div class="detail-reserved">
+                    <div class="node-diagram">
+                        <span>[ PRÓXIMAMENTE: DIAGRAMA E INFORMACIÓN DEL STACK DE MONITOREO ]</span>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-                    <a href="https://github.com/k3r44/HOMELAB_K3R4" target="_blank" class="btn-github" style="margin-top: 20px; display: inline-block;">[/>] Ver documentación base en GitHub</a>
+        <!-- Detalles Fase 3 -->
+        <div id="detail-03" class="full-width-detail">
+            <div class="detail-split">
+                <div class="detail-info">
+                    <p class="meta-content"><strong>Descripción:</strong> Entorno aislado (air-gapped/VLAN separada) para experimentación y despliegue de modelos LLM locales.</p>
+                    <div class="meta-content" style="margin-top: 15px;">
+                        <span class="tech-stack">CUDA</span>
+                        <span class="tech-stack">Ollama</span>
+                    </div>
+                </div>
+                <div class="detail-reserved">
+                    <div class="node-diagram">
+                        <span>[ PRÓXIMAMENTE: DIAGRAMA E INFORMACIÓN DEL SANDBOX IA ]</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Diagrama base que siempre está visible al fondo -->
+    <div class="homelab-diagram">
+        <span>[ PRÓXIMAMENTE: TOPOLOGÍA DE RED Y ARQUITECTURA LÓGICA ]</span>
+    </div>
+    
+</div>
+
+                    <a href="https://github.com/k3r44/Infraestructura-homelab" target="_blank" class="btn-github" style="margin-top: 20px; display: inline-block;">[/>] Ver documentación base en GitHub</a>
                 </article>
             </section>
 
@@ -180,7 +286,7 @@
                                 </div>
                                 <button class="carousel-btn next" aria-label="Siguiente imagen">&#10095;</button>
                             </div>
-                            <span class="carousel-indicator">// Usa las flechas para navegar [ < > ]</span>
+                            <span class="carousel-indicator">// Usa las flechas para navegar [ &lt; &gt; ]</span>
                         </div>
                     </div>
                 </article>
@@ -228,7 +334,7 @@
                                 </div>
                                 <button class="carousel-btn next" aria-label="Siguiente imagen">&#10095;</button>
                             </div>
-                            <span class="carousel-indicator">// Usa las flechas para navegar [ < > ]</span>
+                            <span class="carousel-indicator">// Usa las flechas para navegar [ &lt; &gt; ]</span>
                         </div>
                     </div>
 
@@ -270,7 +376,7 @@
                                 </div>
                                 <button class="carousel-btn next" aria-label="Siguiente imagen">&#10095;</button>
                             </div>
-                            <span class="carousel-indicator">// Usa las flechas para navegar [ < > ]</span>
+                            <span class="carousel-indicator">// Usa las flechas para navegar [ &lt; &gt; ]</span>
                         </div>
                     </div>
 
@@ -390,6 +496,10 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            
+            // ==========================================
+            // 1. LÓGICA DEL CARRUSEL DE IMÁGENES
+            // ==========================================
             document.querySelectorAll('.carousel').forEach(carousel => {
                 const track = carousel.querySelector('.carousel-track');
                 const slides = Array.from(track.querySelectorAll('.slide'));
@@ -411,7 +521,35 @@
                     updateCarousel();
                 });
             });
+
+            
+
         });
+
+
+        // ==========================================
+// LÓGICA DE EXPANSIÓN A ANCHO COMPLETO (HOVER)
+// ==========================================
+const phaseCards = document.querySelectorAll('.node-card');
+const detailPanels = document.querySelectorAll('.full-width-detail');
+
+phaseCards.forEach(card => {
+    // Al poner el mouse encima
+    card.addEventListener('mouseenter', () => {
+        // Quitar la clase active de todos los paneles por si acaso
+        detailPanels.forEach(panel => panel.classList.remove('active'));
+        
+        // Obtener qué panel mostrar y activarlo
+        const targetId = card.getAttribute('data-target');
+        document.getElementById(targetId).classList.add('active');
+    });
+
+    // Al quitar el mouse de la tarjeta
+    card.addEventListener('mouseleave', () => {
+        const targetId = card.getAttribute('data-target');
+        document.getElementById(targetId).classList.remove('active');
+    });
+});
     </script>
 </body>
 </html>

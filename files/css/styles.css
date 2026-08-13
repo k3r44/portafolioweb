@@ -87,7 +87,7 @@ header {
     font-size: 1rem;
     margin-top: 20px;
     margin-bottom: 0;
-    max-width: 800px; /* Ensanchado un poco también para coincidir con la página */
+    max-width: 800px; 
 }
 
 /* === MÉTRICAS ANCLA === */
@@ -179,7 +179,7 @@ header {
     background: linear-gradient(160deg, #12151a 0%, #0a0c10 100%); 
     border: 1px solid rgba(255, 255, 255, 0.08); 
     border-radius: 12px; 
-    padding: 35px; /* Aumentado ligeramente para el nuevo ancho */
+    padding: 35px; 
     margin-bottom: 40px;
     box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.03);
     transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
@@ -219,12 +219,11 @@ header {
 .tag-sec     { background: rgba(255, 123, 114, 0.1); color: #ff7b72; border-color: rgba(255, 123, 114, 0.2);}
 .tag-ai      { background: rgba(210, 168, 255, 0.1); color: #d2a8ff; border-color: rgba(210, 168, 255, 0.2);}
 
-/* 2. LAYOUT DIVIDIDO (PROPORCIÓN 1:1.5) */
+/* 2. LAYOUT DIVIDIDO */
 .project-split {
     display: grid;
-    /* 1 fracción para texto, 1.5 fracciones para imagen (Carrusel 50% más ancho) */
     grid-template-columns: 1fr 1.5fr; 
-    gap: 35px; /* Más espacio entre columnas */
+    gap: 35px; 
     align-items: start;
     margin-top: 15px;
 }
@@ -237,7 +236,7 @@ header {
 
 .project-section {
     display: flex;
-    flex-direction: column; /* Apilamos el título y texto en la misma columna de información para que quede más compacto */
+    flex-direction: column; 
     margin-bottom: 5px;
 }
 
@@ -315,16 +314,15 @@ header {
 .slide {
     min-width: 100%;
     box-sizing: border-box;
-    padding: 15px 45px; /* Espacio generoso lateral para que no toque las flechas */
+    padding: 15px 45px; 
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* 3. AUMENTAMOS EL TAMAÑO MÁXIMO DE LA IMAGEN */
 .carousel-img {
     max-width: 100%;
-    max-height: 350px; /* Pasó de 200px a 350px para ser imponente */
+    max-height: 350px; 
     width: auto;
     height: auto;
     object-fit: contain; 
@@ -334,7 +332,6 @@ header {
     display: block;
 }
 
-/* Botones del Carrusel */
 .carousel-btn {
     position: absolute;
     top: 50%;
@@ -492,7 +489,7 @@ header {
 
 .cert-status.in-progress { background: rgba(255, 166, 87, 0.1); color: #ffa657; border: 1px solid rgba(255, 166, 87, 0.2); }
 .cert-status.done { background: rgba(63, 185, 80, 0.1); color: #3fb950; border: 1px solid rgba(63, 185, 80, 0.2); }
-.cert-status.not-started { background: rgba(128, 128, 128, 0.1); color: #4d4c4c; border: 1px solid rgba(128, 128, 128, 0.2); }
+.cert-status.not-started { background: rgba(128, 128, 128, 0.1); color: #8b949e; border: 1px solid rgba(128, 128, 128, 0.2); }
 
 /* === FOOTER === */
 footer {
@@ -523,7 +520,7 @@ h2 { opacity: 0; animation: systemRender 0.5s cubic-bezier(0.16, 1, 0.3, 1) forw
 /* === RESPONSIVE MOBILE === */
 @media (max-width: 1024px) {
     .project-split {
-        grid-template-columns: 1fr; /* Si la pantalla no es tan grande, se apilan para no aplastar el texto */
+        grid-template-columns: 1fr; 
         gap: 25px;
     }
 }
@@ -547,7 +544,7 @@ h2 { opacity: 0; animation: systemRender 0.5s cubic-bezier(0.16, 1, 0.3, 1) forw
 }
 
 /* =========================================
-   HOMELAB GRID Y NODOS (Sub-proyectos)
+   HOMELAB GRID Y NODOS (INTERFAZ PESTAÑAS)
 ========================================= */
 .homelab-container {
     display: flex;
@@ -562,17 +559,27 @@ h2 { opacity: 0; animation: systemRender 0.5s cubic-bezier(0.16, 1, 0.3, 1) forw
     gap: 16px;
 }
 
+/* Tarjetas base (Master) */
 .node-card {
     background-color: rgba(255, 255, 255, 0.02);
-    border: 1px solid #30363d; /* Tu color de borde actual */
+    border: 1px solid #30363d;
     border-radius: 6px;
     padding: 16px;
-    border-left: 3px solid #8b949e; /* Un acento visual para parecer un servidor */
-    transition: border-color 0.3s ease;
+    border-left: 3px solid #8b949e;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .node-card:hover {
     border-color: #8b949e;
+    background-color: rgba(255, 255, 255, 0.04);
+}
+
+/* Tarjeta seleccionada/activa */
+.node-card.active-card {
+    border-color: #5a6068;
+    border-left-color: #3fb950;
+    background-color: rgba(63, 185, 80, 0.05);
 }
 
 .node-header {
@@ -586,7 +593,7 @@ h2 { opacity: 0; animation: systemRender 0.5s cubic-bezier(0.16, 1, 0.3, 1) forw
     font-family: 'Fira Code', monospace;
     font-size: 0.95rem;
     font-weight: 600;
-    color: #e6edf3; /* Color de texto principal */
+    color: #e6edf3;
     margin: 0;
 }
 
@@ -603,11 +610,30 @@ h2 { opacity: 0; animation: systemRender 0.5s cubic-bezier(0.16, 1, 0.3, 1) forw
     background-color: rgba(210, 153, 34, 0.1);
     color: #d29922;
 }
+
 .node-status.not-started {
     background-color: rgba(139, 148, 158, 0.1);
-    color: #8b949e; /* Gris claro, ideal para fondos oscuros */
+    color: #8b949e;
 }
 
+/* Contenedor de las vistas de detalle (Detail) */
+.homelab-display {
+    margin-top: 24px;
+    min-height: 200px;
+}
+
+/* Vistas ocultas por defecto */
+.node-view {
+    display: none;
+    animation: fadeInHomelab 0.4s ease-in-out;
+}
+
+/* Vista activa (se muestra) */
+.node-view.active-view {
+    display: block;
+}
+
+/* Diagramas (usado en la vista global y las específicas) */
 .homelab-diagram {
     width: 100%;
     border: 1px dashed #5a6068;
@@ -617,4 +643,159 @@ h2 { opacity: 0; animation: systemRender 0.5s cubic-bezier(0.16, 1, 0.3, 1) forw
     border-radius: 6px;
     background-color: rgba(255,255,255,0.01);
     font-family: 'Fira Code', monospace;
+}
+
+/* ==========================================
+   EFECTO POP-OUT FLOTANTE (HOVER)
+========================================== */
+
+/* ==========================================
+   TARJETAS DE FASES (ESTADO INICIAL)
+========================================== */
+.node-card {
+    background-color: #1a1e24; 
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 20px 24px;
+    cursor: default;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    
+    /* Le damos cuerpo y estructura interna */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 120px; /* Evita que se vean aplastadas */
+    gap: 15px;
+}
+
+/* Elevación sutil al hacer hover */
+.node-card:hover {
+    transform: translateY(-5px);
+    border-color: #8b949e;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Fila superior: Fase y Estado */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Estilo de la etiqueta de fase (sutil, tipo código) */
+.phase-label {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.85rem;
+    color: #8b949e; 
+    letter-spacing: 0.5px;
+}
+
+/* Título principal del nodo */
+
+.node-title {
+    font-family: 'Fira Code', monospace;
+    font-size: 1.2rem; /* Ligeramente más pequeño para compensar el ancho */
+    font-weight: 600;
+    margin: 0;
+    color: #e6edf3;
+    text-transform: uppercase; /* Opcional: Hace que se vea más como un bloque de servidor */
+    letter-spacing: -0.5px; /* Junta un poquito las letras para que se vea más sólido */
+}
+/* ==========================================
+   PANEL EXPANDIDO A ANCHO COMPLETO
+========================================== */
+.details-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 20px; /* Mantiene un espaciado base */
+    margin-top: 15px;
+}
+
+.full-width-detail {
+    position: absolute; /* Se posiciona sobre el mismo espacio */
+    top: 0;
+    left: 0;
+    width: 100%;
+    
+    background-color: #1a1e24;
+    border: 1px solid #8b949e; /* Borde resaltado para que se note activo */
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+    
+    /* Oculto por defecto */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    z-index: 100;
+}
+
+/* Clase que aplicará el JS para mostrar el panel */
+.full-width-detail.active {
+    position: relative; /* Para que empuje el contenido de abajo (el diagrama) */
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Layout interno del panel expandido */
+/* ==========================================
+   LAYOUT INTERNO DEL PANEL (APILADO VERTICAL)
+========================================== */
+
+/* Posicionamiento absoluto para la esquina superior derecha */
+.detail-top-right {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Texto sutil antes del badge de estado */
+.status-prefix {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.85rem;
+    color: #8b949e;
+}
+
+/* Contenedor principal apilado */
+.detail-stacked-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px; /* Da un poco de respiro desde el borde superior */
+}
+
+/* Limitamos el ancho de la descripción para que no choque con el estado flotante */
+.desc-text {
+    max-width: 75%;
+}
+
+/* Separador sutil para la zona de info reservada */
+.detail-reserved {
+    border-top: 1px dashed #30363d;
+    padding-top: 20px;
+    margin-top: 5px;
+}
+
+/* Responsividad: En pantallas muy pequeñas, quitamos el position absolute para que no se encime */
+@media (max-width: 768px) {
+    .detail-top-right {
+        position: relative;
+        top: 0;
+        right: 0;
+        margin-bottom: 15px;
+    }
+    .desc-text {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .detail-split {
+        grid-template-columns: 1fr; /* En móviles se apila una cosa sobre otra */
+    }
 }
