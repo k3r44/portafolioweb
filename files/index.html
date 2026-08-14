@@ -1,530 +1,817 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hector Cu | Systems & Infrastructure</title>
+    <meta name="referrer" content="no-referrer" />
 
-    <link rel="icon" type="image/svg+xml" href="./images/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="./images/favicon.svg" />
 
-    <meta property="og:type"        content="website">
-    <meta property="og:title"       content="Hector Cu | Systems & Infrastructure">
-    <meta property="og:description" content="Ingeniero de Sistemas enfocado en arquitectura cloud, observabilidad y ciberseguridad. 3 sistemas en producción sobre GCP, libvirt y Laravel.">
-    <meta property="og:url"         content="https://portafolio.cugarciahector.workers.dev/">
-    <meta property="og:image"       content="https://i.imgur.com/SAuv549.png">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Hector Cu | Systems & Infrastructure" />
+    <meta
+      property="og:description"
+      content="Ingeniero de Sistemas enfocado en arquitectura cloud, observabilidad y ciberseguridad. 3 sistemas en producción sobre GCP, libvirt y Laravel."
+    />
+    <meta
+      property="og:url"
+      content="https://portafolio.cugarciahector.workers.dev/"
+    />
+    <meta property="og:image" content="https://i.imgur.com/SAuv549.png" />
 
-    <meta name="twitter:card"        content="summary_large_image">
-    <meta name="twitter:title"       content="Hector Cu | Systems & Infrastructure">
-    <meta name="twitter:description" content="Ingeniero de Sistemas enfocado en arquitectura cloud, observabilidad y ciberseguridad.">
-    <meta name="twitter:image"       content="https://i.imgur.com/SAuv549.png">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Hector Cu | Systems & Infrastructure" />
+    <meta
+      name="twitter:description"
+      content="Ingeniero de Sistemas enfocado en arquitectura cloud, observabilidad y ciberseguridad."
+    />
+    <meta name="twitter:image" content="https://i.imgur.com/SAuv549.png" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/styles.css">
-</head>
-<body>
-
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
     <div class="container">
+      <header>
+        <div class="availability-badge">
+          <span class="availability-dot"></span>
+          disponible para oportunidades
+        </div>
 
-        <header>
-            <div class="availability-badge">
-                <span class="availability-dot"></span>
-                disponible para oportunidades
-            </div>
+        <h1>Hector Cu</h1>
+        <p class="subtitle">
+          `Systems & Infrastructure Engineering / Security Enthusiast`
+        </p>
+        <p class="bio">
+          Diseño, despliego y conecto sistemas distribuidos. Mi enfoque se
+          centra en infraestructura, observabilidad, automatización y seguridad,
+          utilizando la tecnología como herramienta para construir plataformas
+          confiables y mantenibles.
+        </p>
 
-            <h1>Hector Cu</h1>
-            <p class="subtitle">`Systems & Infrastructure Engineering / Security Enthusiast`</p>
-            <p class="bio">
-                Diseño, despliego y conecto sistemas distribuidos. Mi enfoque se centra en
-                infraestructura, observabilidad, automatización y seguridad, utilizando la
-                tecnología como herramienta para construir plataformas confiables y mantenibles.
-            </p>
+        <div class="metrics-bar">
+          <span>[ 3 Sistemas en Producción ]</span>
+          <span class="metrics-divider">|</span>
+          <span>[ +6 Tecnologías Cloud / Infra ]</span>
+          <span class="metrics-divider">|</span>
+          <span>[ Enfoque Security-First ]</span>
+        </div>
 
-            <div class="metrics-bar">
-                <span>[ 3 Sistemas en Producción ]</span>
-                <span class="metrics-divider">|</span>
-                <span>[ +6 Tecnologías Cloud / Infra ]</span>
-                <span class="metrics-divider">|</span>
-                <span>[ Enfoque Security-First ]</span>
-            </div>
+        <nav class="social-links" aria-label="Enlaces sociales">
+          <a href="https://github.com/k3r44" target="_blank" class="social-link"
+            >[/] github</a
+          >
+          <a
+            href="https://www.linkedin.com/in/hector-cu/"
+            target="_blank"
+            class="social-link"
+            >[in] linkedin</a
+          >
+          <a href="mailto:cugarciahector@gmail.com" class="social-link"
+            >[@] email</a
+          >
+        </nav>
+      </header>
 
-            <nav class="social-links" aria-label="Enlaces sociales">
-                <a href="https://github.com/k3r44"              target="_blank" class="social-link">[/] github</a>
-                <a href="https://www.linkedin.com/in/hector-cu/" target="_blank" class="social-link">[in] linkedin</a>
-                <a href="mailto:cugarciahector@gmail.com"                        class="social-link">[@] email</a>
-            </nav>
-        </header>
-
-        <main>
-           <!-- ==========================================
+      <main>
+        <!-- ==========================================
                  PROYECTO INSIGNIA: HOMELAB
             =========================================== -->
-            <section id="homelab" aria-labelledby="title-homelab">
-                <h2 id="title-homelab">/ infraestructura_on_premise</h2>
+        <section id="homelab" aria-labelledby="title-homelab">
+          <h2 id="title-homelab">/ infraestructura_on_premise</h2>
 
-                <article class="project-card">
-                    <h3 class="project-title">
-                        HOMELAB K3R4: CLÚSTER AUTOGESTIONADO
-                        <span class="tag tag-infra">Infraestructura</span>
-                        <span class="tag tag-linux">Linux</span>
-                        <span class="tag tag-sec">Security</span>
-                    </h3>
-                    <p class="subtitle">Ecosistema base diseñado para alta disponibilidad, simulación de entornos empresariales y alojamiento de servicios críticos. <em>(Fase Actual: Diseño y Arquitectura de Red)</em></p>
+          <article class="project-card">
+            <h3 class="project-title">
+              HOMELAB K3R4: CLÚSTER AUTOGESTIONADO
+              <span class="tag tag-infra">Infraestructura</span>
+              <span class="tag tag-linux">Linux</span>
+              <span class="tag tag-sec">Security</span>
+            </h3>
+            <p class="subtitle">
+              Ecosistema base diseñado para alta disponibilidad, simulación de
+              entornos empresariales y alojamiento de servicios críticos.
+              <em>(Fase Actual: Diseño y Arquitectura de Red)</em>
+            </p>
 
-                   <div class="homelab-container">
-    
-    <!-- GRID DE TARJETAS INICIALES (Solo título y estado) -->
-    <!-- GRID DE TARJETAS INICIALES -->
-<div class="homelab-grid">
-    
-    <!-- Fase 1 -->
-    <div class="node-card" data-target="detail-01">
-        <div class="card-header">
-            <span class="phase-label">// fase_01</span>
-            <span class="node-status pending">en_desarrollo</span>
-        </div>
-        <h4 class="node-title">Dev_Web</h4>
-    </div>
-
-    <!-- Fase 2 -->
-    <div class="node-card" data-target="detail-02">
-        <div class="card-header">
-            <span class="phase-label">// fase_02</span>
-            <span class="node-status not-started">proximamente</span>
-        </div>
-        <h4 class="node-title">Observabilidad</h4>
-    </div>
-
-    <!-- Fase 3 -->
-    <div class="node-card" data-target="detail-03">
-        <div class="card-header">
-            <span class="phase-label">// fase_03</span>
-            <span class="node-status not-started">proximamente</span>
-        </div>
-        <h4 class="node-title">Sandbox_IA</h4>
-    </div>
-
-</div>
-
-    <!-- PANELES DE DETALLE A ANCHO COMPLETO (Se muestran al hacer hover) -->
-    <!-- PANELES DE DETALLE A ANCHO COMPLETO (Se muestran al hacer hover) -->
-<!-- PANELES DE DETALLE A ANCHO COMPLETO -->
-<div class="details-wrapper">
-    
-    <!-- Detalles Fase 1 -->
-    <div id="detail-01" class="full-width-detail">
-        <div class="detail-top-right">
-            
-            <!-- Asegúrate de usar la clase 'pending' para el verde -->
-            <span class="node-status status">Arquitectura y Diseño</span>
-        </div>
-        
-        <div class="detail-content-grid">
-            <!-- COLUMNA IZQUIERDA: Textos y Tecnologías -->
-            <div class="detail-text-col">
-                <p class="meta-content desc-text"><strong>Descripción:</strong> Entorno de despliegue para aplicaciones web (staging/producción local) enfocado en estabilidad.</p>
-                
-                <p class="meta-content" style="margin-top: 15px;"><strong>Objetivos:</strong> Simular el entorno de despliegue para páginas y aplicaciones web.</p>
-                
-                <!-- Tecnologías al final del flujo -->
-                <div class="meta-content" style="margin-top: 25px;">
-                    <span class="tech-stack">LXC</span>
-                    <span class="tech-stack">Nginx</span>
-                    <span class="tech-stack">Cloudflare Tunnels</span>
+            <div class="homelab-container">
+              <!-- GRID DE TARJETAS INICIALES -->
+              <div class="homelab-grid">
+                <!-- Fase 1 -->
+                <div class="node-card" data-target="detail-01">
+                  <div class="card-header">
+                    <span class="phase-label">// fase_01</span>
+                    <span class="node-status pending">en_desarrollo</span>
+                  </div>
+                  <h4 class="node-title">Dev_Web</h4>
                 </div>
-            </div>
-            
-            <!-- COLUMNA DERECHA: Diagrama -->
-            <div class="detail-diagram-col">
-                <div class="node-diagram">
-                    <span>[ DIAGRAMA ESPECÍFICO DE LA FASE 01 ]</span>
+
+                <!-- Fase 2 -->
+                <div class="node-card" data-target="detail-02">
+                  <div class="card-header">
+                    <span class="phase-label">// fase_02</span>
+                    <span class="node-status not-started">proximamente</span>
+                  </div>
+                  <h4 class="node-title">Observabilidad</h4>
                 </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Detalles Fase 2 -->
-    <div id="detail-02" class="full-width-detail">
-        <div class="detail-top-right">
-            <span class="node-status not-started">Próximamente</span>
-        </div>
-        
-        <div class="detail-content-grid">
-            <div class="detail-text-col">
-                <p class="meta-content desc-text"><strong>Descripción:</strong> Stack integral para la supervisión de recursos, máquinas virtuales y contenedores en tiempo real.</p>
-                
-                <p class="meta-content" style="margin-top: 15px;"><strong>Objetivos:</strong> Monitoreo proactivo, recolección de métricas y visualización de logs.</p>
-                
-                <div class="meta-content" style="margin-top: 25px;">
-                    <span class="tech-stack">Prometheus</span>
-                    <span class="tech-stack">Grafana</span>
+                <!-- Fase 3 -->
+                <div class="node-card" data-target="detail-03">
+                  <div class="card-header">
+                    <span class="phase-label">// fase_03</span>
+                    <span class="node-status not-started">proximamente</span>
+                  </div>
+                  <h4 class="node-title">Sandbox_IA</h4>
                 </div>
-            </div>
-            
-            <div class="detail-diagram-col">
-                <div class="node-diagram">
-                    <span>[ PRÓXIMAMENTE: DIAGRAMA E INFORMACIÓN DEL STACK ]</span>
+              </div>
+
+              <!-- PANELES DE DETALLE A ANCHO COMPLETO -->
+              <div class="details-wrapper">
+                <!-- Detalles Fase 1 -->
+                <div id="detail-01" class="full-width-detail">
+                  <div class="detail-top-right">
+                    <span class="node-status status">Arquitectura y Diseño</span>
+                  </div>
+
+                  <div class="detail-content-grid">
+                    <div class="detail-text-col">
+                      <p class="meta-content desc-text">
+                        <strong>Descripción:</strong> Entorno de despliegue para
+                        aplicaciones web (staging/producción local) enfocado en
+                        estabilidad.
+                      </p>
+
+                      <p class="meta-content" style="margin-top: 15px">
+                        <strong>Objetivos:</strong> Simular el entorno de
+                        despliegue para páginas y aplicaciones web.
+                      </p>
+
+                      <div class="meta-content" style="margin-top: 25px">
+                        <span class="tech-stack">LXC</span>
+                        <span class="tech-stack">Nginx</span>
+                        <span class="tech-stack">Cloudflare Tunnels</span>
+                      </div>
+                    </div>
+
+                    <div class="detail-diagram-col">
+                      <!-- Contenedor con ID para Mermaid.js -->
+                      <div class="node-diagram" id="diagrama-fase-1">
+                        <!-- El script de Mermaid inyectará el gráfico aquí -->
+                      </div>
+                    </div>
+                  </div>
                 </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Detalles Fase 3 -->
-    <div id="detail-03" class="full-width-detail">
-        <div class="detail-top-right">
+                <!-- Detalles Fase 2 -->
+                <div id="detail-02" class="full-width-detail">
+                  <div class="detail-top-right">
+                    <span class="node-status not-started">Próximamente</span>
+                  </div>
 
-            <span class="node-status not-started">Próximamente</span>
-        </div>
-        
-        <div class="detail-content-grid">
-            <div class="detail-text-col">
-                <p class="meta-content desc-text"><strong>Descripción:</strong> Entorno aislado (air-gapped/VLAN separada) para experimentación y despliegue de modelos LLM locales.</p>
-                
-                <p class="meta-content" style="margin-top: 15px;"><strong>Objetivos:</strong> Alojar servicios de IA sin exposición externa garantizando privacidad de datos.</p>
-                
-                <div class="meta-content" style="margin-top: 25px;">
-                    <span class="tech-stack">CUDA</span>
-                    <span class="tech-stack">Ollama</span>
+                  <div class="detail-content-grid">
+                    <div class="detail-text-col">
+                      <p class="meta-content desc-text">
+                        <strong>Descripción:</strong> Stack integral para la
+                        supervisión de recursos, máquinas virtuales y
+                        contenedores en tiempo real.
+                      </p>
+
+                      <p class="meta-content" style="margin-top: 15px">
+                        <strong>Objetivos:</strong> Monitoreo proactivo,
+                        recolección de métricas y visualización de logs.
+                      </p>
+
+                      <div class="meta-content" style="margin-top: 25px">
+                        <span class="tech-stack">Prometheus</span>
+                        <span class="tech-stack">Grafana</span>
+                      </div>
+                    </div>
+
+                    <div class="detail-diagram-col">
+                      <div class="node-diagram">
+                        <span>[ PRÓXIMAMENTE: DIAGRAMA E INFORMACIÓN DEL STACK ]</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-            </div>
-            
-            <div class="detail-diagram-col">
-                <div class="node-diagram">
-                    <span>[ PRÓXIMAMENTE: DIAGRAMA E INFORMACIÓN DEL SANDBOX IA ]</span>
+
+                <!-- Detalles Fase 3 -->
+                <div id="detail-03" class="full-width-detail">
+                  <div class="detail-top-right">
+                    <span class="node-status not-started">Próximamente</span>
+                  </div>
+
+                  <div class="detail-content-grid">
+                    <div class="detail-text-col">
+                      <p class="meta-content desc-text">
+                        <strong>Descripción:</strong> Entorno aislado
+                        (air-gapped/VLAN separada) para experimentación y
+                        despliegue de modelos LLM locales.
+                      </p>
+
+                      <p class="meta-content" style="margin-top: 15px">
+                        <strong>Objetivos:</strong> Alojar servicios de IA sin
+                        exposición externa garantizando privacidad de datos.
+                      </p>
+
+                      <div class="meta-content" style="margin-top: 25px">
+                        <span class="tech-stack">CUDA</span>
+                        <span class="tech-stack">Ollama</span>
+                      </div>
+                    </div>
+
+                    <div class="detail-diagram-col">
+                      <div class="node-diagram">
+                        <span>[ PRÓXIMAMENTE: DIAGRAMA E INFORMACIÓN DEL SANDBOX IA ]</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </div>
+
+              <!-- Diagrama base que siempre está visible al fondo -->
+              <div class="homelab-diagram">
+                <span>[ PRÓXIMAMENTE: TOPOLOGÍA DE RED Y ARQUITECTURA LÓGICA ]</span>
+              </div>
             </div>
-        </div>
-    </div>
 
-</div>
+            <a
+              href="https://github.com/k3r44/Infraestructura-homelab"
+              target="_blank"
+              class="btn-github"
+              style="margin-top: 20px; display: inline-block"
+              >[/>] Ver documentación base en GitHub</a
+            >
+          </article>
+        </section>
 
-    <!-- Diagrama base que siempre está visible al fondo -->
-    <div class="homelab-diagram">
-        <span>[ PRÓXIMAMENTE: TOPOLOGÍA DE RED Y ARQUITECTURA LÓGICA ]</span>
-    </div>
-    
-</div>
-
-                    <a href="https://github.com/k3r44/Infraestructura-homelab" target="_blank" class="btn-github" style="margin-top: 20px; display: inline-block;">[/>] Ver documentación base en GitHub</a>
-                </article>
-            </section>
-
-            <!-- ==========================================
+        <!-- ==========================================
                  OTROS PROYECTOS PRINCIPALES
             =========================================== -->
-            <section id="proyectos" aria-labelledby="title-proyectos">
-                <h2 id="title-proyectos">/ desarrollos_stand_alone</h2>
+        <section id="proyectos" aria-labelledby="title-proyectos">
+          <h2 id="title-proyectos">/ desarrollos_stand_alone</h2>
 
-                <article class="project-card">
-                    <h3 class="project-title">
-                        ORQUESTACIÓN Y STACK DE OBSERVABILIDAD
-                        <span class="tag tag-infra">Infraestructura</span>
-                        <span class="tag tag-cloud">Cloud</span>
-                        <span class="tag tag-sec">Security</span>
-                    </h3>
-                    <p class="subtitle" style="margin-bottom: 20px;">Despliegue y correlación de métricas en entornos Linux multi-nodo sobre GCP.</p>
+          <article class="project-card">
+            <h3 class="project-title">
+              ORQUESTACIÓN Y STACK DE OBSERVABILIDAD
+              <span class="tag tag-infra">Infraestructura</span>
+              <span class="tag tag-cloud">Cloud</span>
+              <span class="tag tag-sec">Security</span>
+            </h3>
+            <p class="subtitle" style="margin-bottom: 20px">
+              Despliegue y correlación de métricas en entornos Linux multi-nodo
+              sobre GCP.
+            </p>
 
-                    <div class="project-split">
-                        <div class="project-info">
-                            <div class="project-section">
-                                <span class="meta-label">Problema:</span>
-                                <p class="meta-content">Ausencia de visibilidad centralizada sobre métricas de rendimiento de servicios empresariales distribuidos en la nube sobre distintas distribuciones Linux, impidiendo aislar cuellos de botella antes de que impacten en producción.</p>
-                            </div>
+            <div class="project-split">
+              <div class="project-info">
+                <div class="project-section">
+                  <span class="meta-label">Problema:</span>
+                  <p class="meta-content">
+                    Ausencia de visibilidad centralizada sobre métricas de
+                    rendimiento de servicios empresariales distribuidos en la
+                    nube sobre distintas distribuciones Linux, impidiendo aislar
+                    cuellos de botella antes de que impacten en producción.
+                  </p>
+                </div>
 
-                            <div class="project-section">
-                                <span class="meta-label">Solución:</span>
-                                <p class="meta-content">Arquitectura multi-nodo en GCP con nodo central de observabilidad. Bastionado de permisos en directorios críticos (<code>/opt</code>), políticas estrictas de firewall y enrutamiento interno mediante VPC tags para comunicación segura entre nodos.</p>
-                            </div>
+                <div class="project-section">
+                  <span class="meta-label">Solución:</span>
+                  <p class="meta-content">
+                    Arquitectura multi-nodo en GCP con nodo central de
+                    observabilidad. Bastionado de permisos en directorios
+                    críticos (<code>/opt</code>), políticas estrictas de
+                    firewall y enrutamiento interno mediante VPC tags para
+                    comunicación segura entre nodos.
+                  </p>
+                </div>
 
-                            <div class="project-section">
-                                <span class="meta-label">Capacidades:</span>
-                                <div class="meta-content">
-                                    <span class="tech-stack">Administración Linux</span>
-                                    <span class="tech-stack">Observabilidad (Prometheus/Grafana)</span>
-                                    <span class="tech-stack">Cloud VPC & Firewalls (GCP)</span>
-                                    <span class="tech-stack">Endurecimiento de Servidores</span>
-                                </div>
-                            </div>
+                <div class="project-section">
+                  <span class="meta-label">Capacidades:</span>
+                  <div class="meta-content">
+                    <span class="tech-stack">Administración Linux</span>
+                    <span class="tech-stack"
+                      >Observabilidad (Prometheus/Grafana)</span
+                    >
+                    <span class="tech-stack">Cloud VPC & Firewalls (GCP)</span>
+                    <span class="tech-stack">Endurecimiento de Servidores</span>
+                  </div>
+                </div>
 
-                            <div class="project-section">
-                                <span class="meta-label">Tecnologías:</span>
-                                <p class="meta-content tech-list">GCP, Prometheus, Grafana, Node Exporter, JMX Exporter, Apache Tomcat, Payara 6, systemd, Linux.</p>
-                            </div>
-                        </div>
+                <div class="project-section">
+                  <span class="meta-label">Tecnologías:</span>
+                  <p class="meta-content tech-list">
+                    GCP, Prometheus, Grafana, Node Exporter, JMX Exporter,
+                    Apache Tomcat, Payara 6, systemd, Linux.
+                  </p>
+                </div>
+              </div>
 
-                        <div class="project-gallery">
-                            <div class="carousel-container carousel">
-                                <button class="carousel-btn prev" aria-label="Imagen anterior">&#10094;</button>
-                                <div class="carousel-track">
-                                    <div class="slide"><img src="https://i.imgur.com/qq0LzWN.png" alt="Arquitectura del Stack de Monitoreo" class="carousel-img"></div>
-                                    <div class="slide"><img src="https://i.imgur.com/SAuv549.png" alt="Grafana Telemetry Dashboard" class="carousel-img"></div>
-                                    <div class="slide"><img src="https://i.imgur.com/YJ1fjzV.png" alt="Grafana Resource Detail" class="carousel-img"></div>
-                                </div>
-                                <button class="carousel-btn next" aria-label="Siguiente imagen">&#10095;</button>
-                            </div>
-                            <span class="carousel-indicator">// Usa las flechas para navegar [ &lt; &gt; ]</span>
-                        </div>
+              <div class="project-gallery">
+                <div class="carousel-container carousel">
+                  <button
+                    class="carousel-btn prev"
+                    aria-label="Imagen anterior"
+                  >
+                    &#10094;
+                  </button>
+                  <div class="carousel-track">
+                    <div class="slide">
+                      <img
+                        src="https://i.imgur.com/qq0LzWN.png"
+                        alt="Arquitectura del Stack de Monitoreo"
+                        class="carousel-img"
+                      />
                     </div>
-                </article>
-
-                <article class="project-card">
-                    <h3 class="project-title">
-                        ECOSISTEMA CLOUD E INTEGRACIÓN IOT / AI — TEMPUS COFFEE
-                        <span class="tag tag-iot">IoT</span>
-                        <span class="tag tag-cloud">Cloud</span>
-                        <span class="tag tag-ai">AI</span>
-                        <span class="tag tag-sec">Security</span>
-                    </h3>
-                    <p class="subtitle" style="margin-bottom: 20px;">Infraestructura cloud, pipelines de comunicación distribuida y consistencia de datos para hardware automatizado.</p>
-
-                    <div class="project-split">
-                        <div class="project-info">
-                            <div class="project-section">
-                                <span class="meta-label">Problema:</span>
-                                <p class="meta-content">Controlar de forma remota un sistema embebido en tiempo real, garantizando seguridad en la persistencia de datos y mitigando la naturaleza probabilística de los LLMs para evitar fallas en el hardware.</p>
-                            </div>
-
-                            <div class="project-section">
-                                <span class="meta-label">Solución:</span>
-                                <p class="meta-content">Backend securizado con Sanctum. Sanitización avanzada de prompts antes de retransmitirlos. Orquestación de daemons persistentes para procesar ventanas críticas de tiempo real vía MQTT.</p>
-                            </div>
-
-                            <div class="project-section">
-                                <span class="meta-label">Lógica/Flujo:</span>
-                                <p class="meta-content flow-text">Usuario/Voz → API REST → Sanitización → MQTT → Hardware</p>
-                            </div>
-
-                            <div class="project-section">
-                                <span class="meta-label">Tecnologías:</span>
-                                <p class="meta-content tech-list">Laravel 11, Sanctum, MQTT, Gemini API, MySQL, Artisan CLI.</p>
-                            </div>
-                        </div>
-
-                        <div class="project-gallery">
-                            <div class="carousel-container carousel">
-                                <button class="carousel-btn prev" aria-label="Imagen anterior">&#10094;</button>
-                                <div class="carousel-track">
-                                    <div class="slide"><img src="https://i.imgur.com/8CYnpdY.png" alt="Arquitectura Cloud MQTT" class="carousel-img"></div>
-                                    <div class="slide"><img src="https://i.imgur.com/5h6PEkO.png" alt="Planos de Ingeniería de Hardware" class="carousel-img"></div>
-                                    <div class="slide"><img src="https://i.imgur.com/HVesEwt.png" alt="Frontend Tempus Coffee" class="carousel-img"></div>
-                                </div>
-                                <button class="carousel-btn next" aria-label="Siguiente imagen">&#10095;</button>
-                            </div>
-                            <span class="carousel-indicator">// Usa las flechas para navegar [ &lt; &gt; ]</span>
-                        </div>
+                    <div class="slide">
+                      <img
+                        src="https://i.imgur.com/SAuv549.png"
+                        alt="Grafana Telemetry Dashboard"
+                        class="carousel-img"
+                      />
                     </div>
-
-                    <a href="https://github.com/k3r44/cafetera-laravel" target="_blank" class="btn-github">[/>] Ver código fuente en GitHub</a>
-                </article>
-
-                <article class="project-card">
-                    <h3 class="project-title">
-                        VIRTUAL CLIENT / AUTOMATIZACIÓN DE ENTORNOS VIRTUALIZADOS
-                        <span class="tag tag-linux">Linux</span>
-                        <span class="tag tag-sec">Security</span>
-                    </h3>
-                    <p class="subtitle" style="margin-bottom: 20px;">Abstracción y gestión de recursos a nivel de sistema operativo para hipervisores nativos de Linux.</p>
-
-                    <div class="project-split">
-                        <div class="project-info">
-                            <div class="project-section">
-                                <span class="meta-label">Problema:</span>
-                                <p class="meta-content">Riesgos de seguridad críticos de administrar hipervisores requiriendo elevación constante de privilegios root, o ejecuciones manuales ineficientes por consola.</p>
-                            </div>
-
-                            <div class="project-section">
-                                <span class="meta-label">Solución:</span>
-                                <p class="meta-content">Sistema modular con interacción directa a la API de libvirt. Aislamiento de privilegios mediante grupos nativos del OS (<code>libvirt</code> / <code>kvm</code>), eliminando comandos root.</p>
-                            </div>
-
-                            <div class="project-section">
-                                <span class="meta-label">Tecnologías:</span>
-                                <p class="meta-content tech-list">Python, PyQt, libvirt API, KVM, XML Architecture, Linux CLI.</p>
-                            </div>
-                        </div>
-
-                        <div class="project-gallery">
-                            <div class="carousel-container carousel">
-                                <button class="carousel-btn prev" aria-label="Imagen anterior">&#10094;</button>
-                                <div class="carousel-track">
-                                    <div class="slide"><img src="https://i.imgur.com/eMKJnuF.png" alt="Diagrama de Arquitectura de Virtual Client" class="carousel-img"></div>
-                                    <div class="slide"><img src="https://i.imgur.com/dEFFFmI.png" alt="Virtual Client GUI Interface" class="carousel-img"></div>
-                                </div>
-                                <button class="carousel-btn next" aria-label="Siguiente imagen">&#10095;</button>
-                            </div>
-                            <span class="carousel-indicator">// Usa las flechas para navegar [ &lt; &gt; ]</span>
-                        </div>
+                    <div class="slide">
+                      <img
+                        src="https://i.imgur.com/YJ1fjzV.png"
+                        alt="Grafana Resource Detail"
+                        class="carousel-img"
+                      />
                     </div>
+                  </div>
+                  <button
+                    class="carousel-btn next"
+                    aria-label="Siguiente imagen"
+                  >
+                    &#10095;
+                  </button>
+                </div>
+                <span class="carousel-indicator"
+                  >// Usa las flechas para navegar [ &lt; &gt; ]</span
+                >
+              </div>
+            </div>
+          </article>
 
-                    <a href="https://github.com/k3r44/Virtual_Client" target="_blank" class="btn-github">[/>] Ver código fuente en GitHub</a>
-                </article>
-            </section>
+          <article class="project-card">
+            <h3 class="project-title">
+              ECOSISTEMA CLOUD E INTEGRACIÓN IOT / AI — TEMPUS COFFEE
+              <span class="tag tag-iot">IoT</span>
+              <span class="tag tag-cloud">Cloud</span>
+              <span class="tag tag-ai">AI</span>
+              <span class="tag tag-sec">Security</span>
+            </h3>
+            <p class="subtitle" style="margin-bottom: 20px">
+              Infraestructura cloud, pipelines de comunicación distribuida y
+              consistencia de datos para hardware automatizado.
+            </p>
 
-            <!-- ==========================================
+            <div class="project-split">
+              <div class="project-info">
+                <div class="project-section">
+                  <span class="meta-label">Problema:</span>
+                  <p class="meta-content">
+                    Controlar de forma remota un sistema embebido en tiempo
+                    real, garantizando seguridad en la persistencia de datos y
+                    mitigando la naturaleza probabilística de los LLMs para
+                    evitar fallas en el hardware.
+                  </p>
+                </div>
+
+                <div class="project-section">
+                  <span class="meta-label">Solución:</span>
+                  <p class="meta-content">
+                    Backend securizado con Sanctum. Sanitización avanzada de
+                    prompts antes de retransmitirlos. Orquestación de daemons
+                    persistentes para procesar ventanas críticas de tiempo real
+                    vía MQTT.
+                  </p>
+                </div>
+
+                <div class="project-section">
+                  <span class="meta-label">Lógica/Flujo:</span>
+                  <p class="meta-content flow-text">
+                    Usuario/Voz → API REST → Sanitización → MQTT → Hardware
+                  </p>
+                </div>
+
+                <div class="project-section">
+                  <span class="meta-label">Tecnologías:</span>
+                  <p class="meta-content tech-list">
+                    Laravel 11, Sanctum, MQTT, Gemini API, MySQL, Artisan CLI.
+                  </p>
+                </div>
+              </div>
+
+              <div class="project-gallery">
+                <div class="carousel-container carousel">
+                  <button
+                    class="carousel-btn prev"
+                    aria-label="Imagen anterior"
+                  >
+                    &#10094;
+                  </button>
+                  <div class="carousel-track">
+                    <div class="slide">
+                      <img
+                        src="https://i.imgur.com/8CYnpdY.png"
+                        alt="Arquitectura Cloud MQTT"
+                        class="carousel-img"
+                      />
+                    </div>
+                    <div class="slide">
+                      <img
+                        src="https://i.imgur.com/5h6PEkO.png"
+                        alt="Planos de Ingeniería de Hardware"
+                        class="carousel-img"
+                      />
+                    </div>
+                    <div class="slide">
+                      <img
+                        src="https://i.imgur.com/HVesEwt.png"
+                        alt="Frontend Tempus Coffee"
+                        class="carousel-img"
+                      />
+                    </div>
+                  </div>
+                  <button
+                    class="carousel-btn next"
+                    aria-label="Siguiente imagen"
+                  >
+                    &#10095;
+                  </button>
+                </div>
+                <span class="carousel-indicator"
+                  >// Usa las flechas para navegar [ &lt; &gt; ]</span
+                >
+              </div>
+            </div>
+
+            <a
+              href="https://github.com/k3r44/cafetera-laravel"
+              target="_blank"
+              class="btn-github"
+              >[/>] Ver código fuente en GitHub</a
+            >
+          </article>
+
+          <article class="project-card">
+            <h3 class="project-title">
+              VIRTUAL CLIENT / AUTOMATIZACIÓN DE ENTORNOS VIRTUALIZADOS
+              <span class="tag tag-linux">Linux</span>
+              <span class="tag tag-sec">Security</span>
+            </h3>
+            <p class="subtitle" style="margin-bottom: 20px">
+              Abstracción y gestión de recursos a nivel de sistema operativo
+              para hipervisores nativos de Linux.
+            </p>
+
+            <div class="project-split">
+              <div class="project-info">
+                <div class="project-section">
+                  <span class="meta-label">Problema:</span>
+                  <p class="meta-content">
+                    Riesgos de seguridad críticos de administrar hipervisores
+                    requiriendo elevación constante de privilegios root, o
+                    ejecuciones manuales ineficientes por consola.
+                  </p>
+                </div>
+
+                <div class="project-section">
+                  <span class="meta-label">Solución:</span>
+                  <p class="meta-content">
+                    Sistema modular con interacción directa a la API de libvirt.
+                    Aislamiento de privilegios mediante grupos nativos del OS
+                    (<code>libvirt</code> / <code>kvm</code>), eliminando
+                    comandos root.
+                  </p>
+                </div>
+
+                <div class="project-section">
+                  <span class="meta-label">Tecnologías:</span>
+                  <p class="meta-content tech-list">
+                    Python, PyQt, libvirt API, KVM, XML Architecture, Linux CLI.
+                  </p>
+                </div>
+              </div>
+
+              <div class="project-gallery">
+                <div class="carousel-container carousel">
+                  <button
+                    class="carousel-btn prev"
+                    aria-label="Imagen anterior"
+                  >
+                    &#10094;
+                  </button>
+                  <div class="carousel-track">
+                    <div class="slide">
+                      <img
+                        src="https://i.imgur.com/eMKJnuF.png"
+                        alt="Diagrama de Arquitectura de Virtual Client"
+                        class="carousel-img"
+                      />
+                    </div>
+                    <div class="slide">
+                      <img
+                        src="https://i.imgur.com/dEFFFmI.png"
+                        alt="Virtual Client GUI Interface"
+                        class="carousel-img"
+                      />
+                    </div>
+                  </div>
+                  <button
+                    class="carousel-btn next"
+                    aria-label="Siguiente imagen"
+                  >
+                    &#10095;
+                  </button>
+                </div>
+                <span class="carousel-indicator"
+                  >// Usa las flechas para navegar [ &lt; &gt; ]</span
+                >
+              </div>
+            </div>
+
+            <a
+              href="https://github.com/k3r44/Virtual_Client"
+              target="_blank"
+              class="btn-github"
+              >[/>] Ver código fuente en GitHub</a
+            >
+          </article>
+        </section>
+
+        <!-- ==========================================
                  STACK TECNOLÓGICO
             =========================================== -->
-            <section id="stack" aria-labelledby="title-stack">
-                <h2 id="title-stack">/ stack_tecnologico</h2>
-                
-                <div class="stack-card">
-                    <div class="project-section">
-                        <span class="meta-label">Infra & Cloud:</span>
-                        <p class="meta-content tech-list">Linux (Ubuntu, Rocky, Oracle), Google Cloud Platform (GCP), libvirt/KVM.</p>
-                    </div>
-                    <div class="project-section">
-                        <span class="meta-label">Observabilidad:</span>
-                        <p class="meta-content tech-list">Prometheus, Grafana, Node/JMX Exporters, systemd.</p>
-                    </div>
-                    <div class="project-section">
-                        <span class="meta-label">Lenguajes:</span>
-                        <p class="meta-content tech-list">Python, Java, C#, PHP (Laravel).</p>
-                    </div>
-                    <div class="project-section">
-                        <span class="meta-label">Bases de Datos:</span>
-                        <p class="meta-content tech-list">SQL, MySQL, Modelado Relacional.</p>
-                    </div>
-                    <div class="project-section">
-                        <span class="meta-label">Redes & Seg.:</span>
-                        <p class="meta-content tech-list">Firewalls, Cloud VPCs, MQTT, Bastionado de Servidores, APIs REST (Sanctum).</p>
-                    </div>
-                </div>
-            </section>
+        <section id="stack" aria-labelledby="title-stack">
+          <h2 id="title-stack">/ stack_tecnologico</h2>
 
-            <!-- ==========================================
+          <div class="stack-card">
+            <div class="project-section">
+              <span class="meta-label">Infra & Cloud:</span>
+              <p class="meta-content tech-list">
+                Linux (Ubuntu, Rocky, Oracle), Google Cloud Platform (GCP),
+                libvirt/KVM.
+              </p>
+            </div>
+            <div class="project-section">
+              <span class="meta-label">Observabilidad:</span>
+              <p class="meta-content tech-list">
+                Prometheus, Grafana, Node/JMX Exporters, systemd.
+              </p>
+            </div>
+            <div class="project-section">
+              <span class="meta-label">Lenguajes:</span>
+              <p class="meta-content tech-list">
+                Python, Java, C#, PHP (Laravel).
+              </p>
+            </div>
+            <div class="project-section">
+              <span class="meta-label">Bases de Datos:</span>
+              <p class="meta-content tech-list">
+                SQL, MySQL, Modelado Relacional.
+              </p>
+            </div>
+            <div class="project-section">
+              <span class="meta-label">Redes & Seg.:</span>
+              <p class="meta-content tech-list">
+                Firewalls, Cloud VPCs, MQTT, Bastionado de Servidores, APIs REST
+                (Sanctum).
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==========================================
                  EDUCACIÓN Y CERTIFICACIONES
             =========================================== -->
-            <section id="educacion" aria-labelledby="title-edu">
-                <h2 id="title-edu">/ educacion_y_certificaciones</h2>
+        <section id="educacion" aria-labelledby="title-edu">
+          <h2 id="title-edu">/ educacion_y_certificaciones</h2>
 
-                <article class="edu-card">
-                    <div class="edu-section">
-                        <span class="edu-time">2023 — Pres.</span>
-                        <div class="edu-flex-container">
-                            <img src="https://placehold.co/100x100/12151a/8b949e?text=UMG" alt="Logo UMG" class="edu-logo">
-                            <div class="meta-content">
-                                <span class="edu-name">Ingeniería en Sistemas de Información y Ciencias de la Computación</span>
-                                <span class="edu-sub">Universidad Mariano Gálvez de Guatemala — 8vo Semestre</span>
-                            </div>
-                        </div>
-                    </div>
-                </article>
+          <article class="edu-card">
+            <div class="edu-section">
+              <span class="edu-time">2023 — Pres.</span>
+              <div class="edu-flex-container">
+                <img
+                  src="https://placehold.co/100x100/12151a/8b949e?text=UMG"
+                  alt="Logo UMG"
+                  class="edu-logo"
+                />
+                <div class="meta-content">
+                  <span class="edu-name"
+                    >Ingeniería en Sistemas de Información y Ciencias de la
+                    Computación</span
+                  >
+                  <span class="edu-sub"
+                    >Universidad Mariano Gálvez de Guatemala — 8vo
+                    Semestre</span
+                  >
+                </div>
+              </div>
+            </div>
+          </article>
 
-                <article class="edu-card">
-                    <div class="edu-section">
-                        <span class="edu-time">En Curso</span>
-                        <div class="edu-flex-container">
-                            <img src="https://placehold.co/100x100/12151a/ffa657?text=SEC%2B" alt="Logo CompTIA" class="edu-logo">
-                            <div class="meta-content">
-                                <span class="edu-name">
-                                    CompTIA Security+
-                                    <span class="cert-status in-progress">preparando</span>
-                                </span>
-                                <span class="edu-sub">Certificación internacional en seguridad de la información.</span>
-                            </div>
-                        </div>
-                    </div>
-                </article>
+          <article class="edu-card">
+            <div class="edu-section">
+              <span class="edu-time">En Curso</span>
+              <div class="edu-flex-container">
+                <img
+                  src="https://placehold.co/100x100/12151a/ffa657?text=SEC%2B"
+                  alt="Logo CompTIA"
+                  class="edu-logo"
+                />
+                <div class="meta-content">
+                  <span class="edu-name">
+                    CompTIA Security+
+                    <span class="cert-status in-progress">preparando</span>
+                  </span>
+                  <span class="edu-sub"
+                    >Certificación internacional en seguridad de la
+                    información.</span
+                  >
+                </div>
+              </div>
+            </div>
+          </article>
 
-                <article class="edu-card">
-                    <div class="edu-section">
-                        <span class="edu-time">Certificado</span>
-                        <div class="edu-flex-container">
-                            <img src="https://placehold.co/100x100/12151a/3fb950?text=DC" alt="Logo DataCamp" class="edu-logo">
-                            <div class="meta-content">
-                                <span class="edu-name">
-                                    Data Engineer Associate & SQL Associate
-                                    <span class="cert-status done">certificado</span>
-                                </span>
-                                <span class="edu-sub">DataCamp — fundamentos de modelado, consulta y estructuración de bases de datos.</span>
-                            </div>
-                        </div>
-                    </div>
-                </article>
+          <article class="edu-card">
+            <div class="edu-section">
+              <span class="edu-time">Certificado</span>
+              <div class="edu-flex-container">
+                <img
+                  src="https://placehold.co/100x100/12151a/3fb950?text=DC"
+                  alt="Logo DataCamp"
+                  class="edu-logo"
+                />
+                <div class="meta-content">
+                  <span class="edu-name">
+                    Data Engineer Associate & SQL Associate
+                    <span class="cert-status done">certificado</span>
+                  </span>
+                  <span class="edu-sub"
+                    >DataCamp — fundamentos de modelado, consulta y
+                    estructuración de bases de datos.</span
+                  >
+                </div>
+              </div>
+            </div>
+          </article>
 
-                <article class="edu-card">
-                    <div class="edu-section">
-                        <span class="edu-time">2021 — 2022</span>
-                        <div class="edu-flex-container">
-                            <img src="https://placehold.co/100x100/12151a/8b949e?text=ENCV" alt="Logo Colegio" class="edu-logo">
-                            <div class="meta-content">
-                                <span class="edu-name">Bachillerato en Ciencias y Letras con Orientación en Computación</span>
-                                <span class="edu-sub">Escuela Normal Central para Varones</span>
-                            </div>
-                        </div>
-                    </div>
-                </article>
+          <article class="edu-card">
+            <div class="edu-section">
+              <span class="edu-time">2021 — 2022</span>
+              <div class="edu-flex-container">
+                <img
+                  src="https://placehold.co/100x100/12151a/8b949e?text=ENCV"
+                  alt="Logo Colegio"
+                  class="edu-logo"
+                />
+                <div class="meta-content">
+                  <span class="edu-name"
+                    >Bachillerato en Ciencias y Letras con Orientación en
+                    Computación</span
+                  >
+                  <span class="edu-sub"
+                    >Escuela Normal Central para Varones</span
+                  >
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+      </main>
 
-            </section>
-        </main>
-
-        <footer>
-            <p class="footer-note">
-                [i] Sitio estático distribuido a través de la red global de Cloudflare Workers.
-            </p>
-            <nav class="social-links" aria-label="Enlaces sociales del pie de página">
-                <a href="https://github.com/k3r44"              target="_blank" class="social-link">[/] github</a>
-                <a href="https://www.linkedin.com/in/hector-cu/" target="_blank" class="social-link">[in] linkedin</a>
-                <a href="mailto:cugarciahector@gmail.com"                        class="social-link">[@] email</a>
-            </nav>
-        </footer>
-
+      <footer>
+        <p class="footer-note">
+          [i] Sitio estático distribuido a través de la red global de Cloudflare
+          Workers.
+        </p>
+        <nav
+          class="social-links"
+          aria-label="Enlaces sociales del pie de página"
+        >
+          <a href="https://github.com/k3r44" target="_blank" class="social-link"
+            >[/] github</a
+          >
+          <a
+            href="https://www.linkedin.com/in/hector-cu/"
+            target="_blank"
+            class="social-link"
+            >[in] linkedin</a
+          >
+          <a href="mailto:cugarciahector@gmail.com" class="social-link"
+            >[@] email</a
+          >
+        </nav>
+      </footer>
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            
-            // ==========================================
-            // 1. LÓGICA DEL CARRUSEL DE IMÁGENES
-            // ==========================================
-            document.querySelectorAll('.carousel').forEach(carousel => {
-                const track = carousel.querySelector('.carousel-track');
-                const slides = Array.from(track.querySelectorAll('.slide'));
-                const nextBtn = carousel.querySelector('.next');
-                const prevBtn = carousel.querySelector('.prev');
-                let currentIndex = 0;
+      document.addEventListener("DOMContentLoaded", () => {
+        // ==========================================
+        // 1. LÓGICA DEL CARRUSEL DE IMÁGENES
+        // ==========================================
+        document.querySelectorAll(".carousel").forEach((carousel) => {
+          const track = carousel.querySelector(".carousel-track");
+          const slides = Array.from(track.querySelectorAll(".slide"));
+          const nextBtn = carousel.querySelector(".next");
+          const prevBtn = carousel.querySelector(".prev");
+          let currentIndex = 0;
 
-                function updateCarousel() {
-                    track.style.transform = `translateX(-${currentIndex * 100}%)`;
-                }
+          function updateCarousel() {
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+          }
 
-                nextBtn.addEventListener('click', () => {
-                    currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
-                    updateCarousel();
-                });
+          nextBtn.addEventListener("click", () => {
+            currentIndex =
+              currentIndex === slides.length - 1 ? 0 : currentIndex + 1;
+            updateCarousel();
+          });
 
-                prevBtn.addEventListener('click', () => {
-                    currentIndex = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
-                    updateCarousel();
-                });
-            });
+          prevBtn.addEventListener("click", () => {
+            currentIndex =
+              currentIndex === 0 ? slides.length - 1 : currentIndex - 1;
+            updateCarousel();
+          });
+        });
+      });
 
-            
+      // ==========================================
+      // 2. LÓGICA DE EXPANSIÓN A ANCHO COMPLETO (HOVER MEJORADO)
+      // ==========================================
+      const phaseCards = document.querySelectorAll(".node-card");
+      const detailPanels = document.querySelectorAll(".full-width-detail");
+      
+      let hideTimeout; // Variable para controlar el temporizador
 
+      phaseCards.forEach((card) => {
+        // Cuando el mouse ENTRA a la tarjeta pequeña
+        card.addEventListener("mouseenter", () => {
+          clearTimeout(hideTimeout); // Cancelamos cualquier cierre pendiente
+          
+          detailPanels.forEach((panel) => panel.classList.remove("active"));
+          const targetId = card.getAttribute("data-target");
+          document.getElementById(targetId).classList.add("active");
         });
 
+        // Cuando el mouse SALE de la tarjeta pequeña
+        card.addEventListener("mouseleave", () => {
+          const targetId = card.getAttribute("data-target");
+          
+          // En lugar de cerrar de golpe, esperamos 150ms. 
+          // Es el tiempo suficiente para mover el mouse hacia abajo.
+          hideTimeout = setTimeout(() => {
+            document.getElementById(targetId).classList.remove("active");
+          }, 150);
+        });
+      });
 
-        // ==========================================
-// LÓGICA DE EXPANSIÓN A ANCHO COMPLETO (HOVER)
-// ==========================================
-const phaseCards = document.querySelectorAll('.node-card');
-const detailPanels = document.querySelectorAll('.full-width-detail');
+      // Añadimos interactividad a los paneles grandes también
+      detailPanels.forEach((panel) => {
+        // Si el mouse logra entrar al panel grande a tiempo, cancelamos el cierre
+        panel.addEventListener("mouseenter", () => {
+          clearTimeout(hideTimeout); 
+        });
 
-phaseCards.forEach(card => {
-    // Al poner el mouse encima
-    card.addEventListener('mouseenter', () => {
-        // Quitar la clase active de todos los paneles por si acaso
-        detailPanels.forEach(panel => panel.classList.remove('active'));
-        
-        // Obtener qué panel mostrar y activarlo
-        const targetId = card.getAttribute('data-target');
-        document.getElementById(targetId).classList.add('active');
-    });
-
-    // Al quitar el mouse de la tarjeta
-    card.addEventListener('mouseleave', () => {
-        const targetId = card.getAttribute('data-target');
-        document.getElementById(targetId).classList.remove('active');
-    });
-});
+        // Si el mouse sale del panel grande, entonces sí lo cerramos
+        panel.addEventListener("mouseleave", () => {
+          panel.classList.remove("active");
+        });
+      });
     </script>
-</body>
+
+    <!-- ==========================================
+         3. LÓGICA DE MERMAID (DIAGRAMAS COMO CÓDIGO)
+         ========================================== -->
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        
+        // Configuramos el diseño oscuro para que combine
+        mermaid.initialize({ 
+            startOnLoad: true, 
+            theme: 'dark',
+            background: 'transparent'
+        });
+
+        // Hacemos el fetch de tu archivo de forma dinámica
+        fetch('./diagrams/produccion_web.mmd')
+            .then(response => {
+                if (!response.ok) throw new Error('No se pudo cargar el archivo del diagrama');
+                return response.text();
+            })
+            .then(mermaidCode => {
+                const container = document.getElementById('diagrama-fase-1');
+                if(container) {
+                    // Metemos el código crudo dentro de la etiqueta pre
+                    container.innerHTML = `<pre class="mermaid">${mermaidCode}</pre>`;
+                    // Le decimos a Mermaid que escanee y dibuje el SVG
+                    mermaid.run({ nodes: container.querySelectorAll('.mermaid') });
+                }
+            })
+            .catch(error => console.error('Error cargando Mermaid:', error));
+    </script>
+  </body>
 </html>

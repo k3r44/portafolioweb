@@ -707,9 +707,11 @@ h2 { opacity: 0; animation: systemRender 0.5s cubic-bezier(0.16, 1, 0.3, 1) forw
 ========================================== */
 .details-wrapper {
     position: relative;
-    width: 100%;
-    min-height: 20px; /* Mantiene un espaciado base */
+    width: 70%;
+    min-height: 20px;
     margin-top: 15px;
+    margin-left: auto;  /* Empuja el contenedor desde la izquierda */
+    margin-right: auto; /* Empuja el contenedor desde la derecha */
 }
 
 .full-width-detail {
@@ -798,4 +800,23 @@ h2 { opacity: 0; animation: systemRender 0.5s cubic-bezier(0.16, 1, 0.3, 1) forw
     .detail-split {
         grid-template-columns: 1fr; /* En móviles se apila una cosa sobre otra */
     }
+}
+/* ==========================================
+   AJUSTE DE ESCALA PARA MERMAID
+   ========================================== */
+/* ==========================================
+   AJUSTE DE ESCALA PARA MERMAID (FORZADO)
+   ========================================== */
+#diagrama-fase-1 svg {
+  width: 100% !important;
+  max-width: 50% !important; 
+  height: auto !important;
+  margin: 0 auto !important;
+  display: block !important;
+}
+
+/* Opcional: Centrar el contenedor del diagrama por si acaso */
+#diagrama-fase-1 .mermaid {
+  display: flex;
+  justify-content: center;
 }
