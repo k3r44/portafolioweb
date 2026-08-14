@@ -809,7 +809,7 @@ h2 { opacity: 0; animation: systemRender 0.5s cubic-bezier(0.16, 1, 0.3, 1) forw
    ========================================== */
 #diagrama-fase-1 svg {
   width: 100% !important;
-  max-width: 50% !important; 
+  max-width: 80% !important; 
   height: auto !important;
   margin: 0 auto !important;
   display: block !important;
