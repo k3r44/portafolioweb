@@ -42,7 +42,16 @@
           disponible para oportunidades
         </div>
 
-        <h1>Hector Cu</h1>
+        <div class="header-title-row">
+          <h1>Hector Cu</h1>
+          
+          <nav class="social-links header-social" aria-label="Enlaces sociales">
+            <a href="https://github.com/k3r44" target="_blank" class="social-link">[/] github</a>
+            <a href="https://www.linkedin.com/in/hector-cu/" target="_blank" class="social-link">[in] linkedin</a>
+            <a href="mailto:cugarciahector@gmail.com" class="social-link">[@] email</a>
+          </nav>
+        </div>
+
         <p class="subtitle">
           `Systems & Infrastructure Engineering / Security Enthusiast`
         </p>
@@ -52,31 +61,99 @@
           utilizando la tecnología como herramienta para construir plataformas
           confiables y mantenibles.
         </p>
-
-        <div class="metrics-bar">
-          <span>[ 3 Sistemas en Producción ]</span>
-          <span class="metrics-divider">|</span>
-          <span>[ +6 Tecnologías Cloud / Infra ]</span>
-          <span class="metrics-divider">|</span>
-          <span>[ Enfoque Security-First ]</span>
-        </div>
-
-        <nav class="social-links" aria-label="Enlaces sociales">
-          <a href="https://github.com/k3r44" target="_blank" class="social-link"
-            >[/] github</a
-          >
-          <a
-            href="https://www.linkedin.com/in/hector-cu/"
-            target="_blank"
-            class="social-link"
-            >[in] linkedin</a
-          >
-          <a href="mailto:cugarciahector@gmail.com" class="social-link"
-            >[@] email</a
-          >
-        </nav>
       </header>
 
+      <section id="stack" aria-labelledby="title-stack">
+        <h2 id="title-stack">/ perfil_y_stack</h2>
+
+        <div class="stack-layout">
+          
+          <aside class="infra-status-panel">
+            <div class="panel-header">
+              <span class="status-indicator"></span>
+              <span class="panel-title">PERFIL_TÉCNICO</span>
+            </div>
+            
+            <div class="panel-body">
+              <div class="status-item">
+                <span class="item-label">Educación:</span>
+                <span class="item-value">Ing. Sistemas (8vo Sem., UMG)</span>
+              </div>
+
+              <div class="status-item">
+                <span class="item-label">Certificaciones:</span>
+                <span class="item-value highlight-green">Data & SQL | Sec+ & Cisco (En prep.)</span>
+              </div>
+
+              <div class="status-item">
+                <span class="item-label">Infraestructura & Labs:</span>
+                <span class="item-value">Homelab K3R4 (Fase 1) + 2 PoCs On-Demand</span>
+              </div>
+
+              <div class="status-item">
+                <span class="item-label">Estado de Entornos:</span>
+                <span class="item-value">Repositorios listos / VMs en Standby</span>
+              </div>
+            </div>
+
+            <div class="panel-footer">
+              <code>status: READY_FOR_DEPLOYMENT</code>
+            </div>
+          </aside>
+
+          <div class="stack-grid">
+            
+            <div class="stack-category-card">
+              <div class="category-header">
+                <span class="meta-label">// Infraestructura & Cloud</span>
+              </div>
+              <div class="tech-stack-container">
+                <span class="tech-badge badge-linux">Linux (Ubuntu, Rocky)</span>
+                <span class="tech-badge badge-cloud">GCP</span>
+                <span class="tech-badge badge-infra">libvirt / KVM</span>
+              </div>
+            </div>
+
+            <div class="stack-category-card">
+              <div class="category-header">
+                <span class="meta-label">// Observabilidad & Telemetría</span>
+              </div>
+              <div class="tech-stack-container">
+                <span class="tech-badge badge-observability">Prometheus</span>
+                <span class="tech-badge badge-observability">Grafana</span>
+                <span class="tech-badge badge-infra">Node/JMX Exporters</span>
+                <span class="tech-badge badge-linux">systemd</span>
+              </div>
+            </div>
+
+            <div class="stack-category-card">
+              <div class="category-header">
+                <span class="meta-label">// Desarrollo & Backend</span>
+              </div>
+              <div class="tech-stack-container">
+                <span class="tech-badge badge-lang">Python</span>
+                <span class="tech-badge badge-lang">Java</span>
+                <span class="tech-badge badge-lang">C#</span>
+                <span class="tech-badge badge-lang">PHP (Laravel)</span>
+              </div>
+            </div>
+
+            <div class="stack-category-card">
+              <div class="category-header">
+                <span class="meta-label">// Redes, Seguridad & Datos</span>
+              </div>
+              <div class="tech-stack-container">
+                <span class="tech-badge badge-sec">Firewalls</span>
+                <span class="tech-badge badge-cloud">Cloud VPCs</span>
+                <span class="tech-badge badge-infra">MQTT</span>
+                <span class="tech-badge badge-db">MySQL / SQL</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
       <main>
         <!-- ==========================================
                  PROYECTO INSIGNIA: HOMELAB
@@ -97,7 +174,7 @@
               <em>(Fase Actual: Diseño y Arquitectura de Red)</em>
             </p>
 
-            <<div class="homelab-container">
+            <div class="homelab-container">
               <!-- GRID DE TARJETAS INICIALES -->
               <div class="homelab-grid">
                 <!-- Fase 1: Dev_Web -->
@@ -225,10 +302,56 @@
               </div>
 
               <!-- Diagrama base que siempre está visible al fondo -->
-              <div class="homelab-diagram">
-                <span>[ PRÓXIMAMENTE: TOPOLOGÍA DE RED Y ARQUITECTURA LÓGICA ]</span>
-              </div>
-            </div>
+              <!-- ==========================================
+     ESPECIFICACIONES BASE DEL HOMELAB (ESTILO TERMINAL)
+     ========================================== -->
+<div class="homelab-specs-terminal">
+  
+  <!-- Barra superior de la ventana -->
+  <div class="terminal-header">
+    <div class="terminal-dots">
+      <span class="dot red"></span>
+      <span class="dot yellow"></span>
+      <span class="dot green"></span>
+    </div>
+    <code>root@k3r4-node:~# cat /etc/cluster_specs.conf</code>
+  </div>
+
+  <div class="terminal-body">
+    <!-- Icono Servidor con resplandor -->
+    <div class="server-graphic">
+      <pre>
+ __________________ 
+|  [≡] K3R4_ROOT   |
+|==================|
+| [■] [■] [■] [■]  |
+|__________________|
+      </pre>
+      <div class="status-badge">● SYS_ONLINE</div>
+    </div>
+
+    <!-- Cuadrícula de especificaciones -->
+    <!-- Cuadrícula de especificaciones (ACTUALIZADA Y HONESTA) -->
+    <div class="specs-grid">
+      <div class="spec-card">
+        <span class="spec-label">// HYPERVISOR</span>
+        <span class="spec-value">Proxmox VE (KVM / LXC)</span>
+      </div>
+      <div class="spec-card">
+        <span class="spec-label">// NET_TOPOLOGY</span>
+        <span class="spec-value">Virt Bridges & VLANs Aisladas</span>
+      </div>
+      <div class="spec-card">
+        <span class="spec-label">// SECURITY</span>
+        <span class="spec-value">Proxmox FW & OS Hardening</span>
+      </div>
+      <div class="spec-card">
+        <span class="spec-label">// ARCHITECTURE</span>
+        <span class="spec-value">Standalone Node (Expansible)</span>
+      </div>
+    </div>
+  </div>
+</div>
             <a
               href="https://github.com/k3r44/Infraestructura-homelab"
               target="_blank"
@@ -534,48 +657,7 @@
           </article>
         </section>
 
-        <!-- ==========================================
-                 STACK TECNOLÓGICO
-            =========================================== -->
-        <section id="stack" aria-labelledby="title-stack">
-          <h2 id="title-stack">/ stack_tecnologico</h2>
-
-          <div class="stack-card">
-            <div class="project-section">
-              <span class="meta-label">Infra & Cloud:</span>
-              <p class="meta-content tech-list">
-                Linux (Ubuntu, Rocky, Oracle), Google Cloud Platform (GCP),
-                libvirt/KVM.
-              </p>
-            </div>
-            <div class="project-section">
-              <span class="meta-label">Observabilidad:</span>
-              <p class="meta-content tech-list">
-                Prometheus, Grafana, Node/JMX Exporters, systemd.
-              </p>
-            </div>
-            <div class="project-section">
-              <span class="meta-label">Lenguajes:</span>
-              <p class="meta-content tech-list">
-                Python, Java, C#, PHP (Laravel).
-              </p>
-            </div>
-            <div class="project-section">
-              <span class="meta-label">Bases de Datos:</span>
-              <p class="meta-content tech-list">
-                SQL, MySQL, Modelado Relacional.
-              </p>
-            </div>
-            <div class="project-section">
-              <span class="meta-label">Redes & Seg.:</span>
-              <p class="meta-content tech-list">
-                Firewalls, Cloud VPCs, MQTT, Bastionado de Servidores, APIs REST
-                (Sanctum).
-              </p>
-            </div>
-          </div>
-        </section>
-
+        
         <!-- ==========================================
                  EDUCACIÓN Y CERTIFICACIONES
             =========================================== -->
