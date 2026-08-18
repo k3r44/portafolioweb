@@ -97,10 +97,10 @@
               <em>(Fase Actual: Diseño y Arquitectura de Red)</em>
             </p>
 
-            <div class="homelab-container">
+            <<div class="homelab-container">
               <!-- GRID DE TARJETAS INICIALES -->
               <div class="homelab-grid">
-                <!-- Fase 1 -->
+                <!-- Fase 1: Dev_Web -->
                 <div class="node-card" data-target="detail-01">
                   <div class="card-header">
                     <span class="phase-label">// fase_01</span>
@@ -109,28 +109,29 @@
                   <h4 class="node-title">Dev_Web</h4>
                 </div>
 
-                <!-- Fase 2 -->
-                <div class="node-card" data-target="detail-02">
+                <!-- Fase 2: Sandbox_IA -->
+                 <div class="node-card" data-target="detail-02">
                   <div class="card-header">
                     <span class="phase-label">// fase_02</span>
                     <span class="node-status not-started">proximamente</span>
                   </div>
-                  <h4 class="node-title">Observabilidad</h4>
+                  <h4 class="node-title">Sandbox_IA</h4>
                 </div>
 
-                <!-- Fase 3 -->
+                <!-- Fase 3: Observabilidad -->
                 <div class="node-card" data-target="detail-03">
                   <div class="card-header">
                     <span class="phase-label">// fase_03</span>
                     <span class="node-status not-started">proximamente</span>
                   </div>
-                  <h4 class="node-title">Sandbox_IA</h4>
+                  <h4 class="node-title">Observabilidad</h4>
                 </div>
-              </div>
+              </div> <!-- ESTE DIV CIERRA EL GRID (Ahora sí incluye las 3) -->
 
               <!-- PANELES DE DETALLE A ANCHO COMPLETO -->
               <div class="details-wrapper">
-                <!-- Detalles Fase 1 -->
+                
+                <!-- Detalles Fase 1: Dev_Web -->
                 <div id="detail-01" class="full-width-detail">
                   <div class="detail-top-right">
                     <span class="node-status status">Arquitectura y Diseño</span>
@@ -143,19 +144,16 @@
                         aplicaciones web (staging/producción local) enfocado en
                         estabilidad.
                       </p>
-
                       <p class="meta-content" style="margin-top: 15px">
                         <strong>Objetivos:</strong> Simular el entorno de
                         despliegue para páginas y aplicaciones web.
                       </p>
-
                       <div class="meta-content" style="margin-top: 25px">
                         <span class="tech-stack">LXC</span>
                         <span class="tech-stack">Nginx</span>
                         <span class="tech-stack">Cloudflare Tunnels</span>
                       </div>
                     </div>
-
                     <div class="detail-diagram-col">
                       <!-- Contenedor con ID para Mermaid.js -->
                       <div class="node-diagram" id="diagrama-fase-1">
@@ -165,41 +163,8 @@
                   </div>
                 </div>
 
-                <!-- Detalles Fase 2 -->
-                <div id="detail-02" class="full-width-detail">
-                  <div class="detail-top-right">
-                    <span class="node-status not-started">Próximamente</span>
-                  </div>
-
-                  <div class="detail-content-grid">
-                    <div class="detail-text-col">
-                      <p class="meta-content desc-text">
-                        <strong>Descripción:</strong> Stack integral para la
-                        supervisión de recursos, máquinas virtuales y
-                        contenedores en tiempo real.
-                      </p>
-
-                      <p class="meta-content" style="margin-top: 15px">
-                        <strong>Objetivos:</strong> Monitoreo proactivo,
-                        recolección de métricas y visualización de logs.
-                      </p>
-
-                      <div class="meta-content" style="margin-top: 25px">
-                        <span class="tech-stack">Prometheus</span>
-                        <span class="tech-stack">Grafana</span>
-                      </div>
-                    </div>
-
-                    <div class="detail-diagram-col">
-                      <div class="node-diagram">
-                        <span>[ PRÓXIMAMENTE: DIAGRAMA E INFORMACIÓN DEL STACK ]</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Detalles Fase 3 -->
-                <div id="detail-03" class="full-width-detail">
+                <!-- Detalles Fase 2: Sandbox_IA -->
+                 <div id="detail-02" class="full-width-detail">
                   <div class="detail-top-right">
                     <span class="node-status not-started">Próximamente</span>
                   </div>
@@ -211,18 +176,15 @@
                         (air-gapped/VLAN separada) para experimentación y
                         despliegue de modelos LLM locales.
                       </p>
-
                       <p class="meta-content" style="margin-top: 15px">
                         <strong>Objetivos:</strong> Alojar servicios de IA sin
                         exposición externa garantizando privacidad de datos.
                       </p>
-
                       <div class="meta-content" style="margin-top: 25px">
                         <span class="tech-stack">CUDA</span>
                         <span class="tech-stack">Ollama</span>
                       </div>
                     </div>
-
                     <div class="detail-diagram-col">
                       <div class="node-diagram">
                         <span>[ PRÓXIMAMENTE: DIAGRAMA E INFORMACIÓN DEL SANDBOX IA ]</span>
@@ -230,6 +192,37 @@
                     </div>
                   </div>
                 </div>
+
+                <!-- Detalles Fase 3: Observabilidad -->
+                <div id="detail-03" class="full-width-detail">
+                  <div class="detail-top-right">
+                    <span class="node-status not-started">Próximamente</span>
+                  </div>
+
+                  <div class="detail-content-grid">
+                    <div class="detail-text-col">
+                      <p class="meta-content desc-text">
+                        <strong>Descripción:</strong> Stack integral para la
+                        supervisión de recursos, máquinas virtuales y
+                        contenedores en tiempo real.
+                      </p>
+                      <p class="meta-content" style="margin-top: 15px">
+                        <strong>Objetivos:</strong> Monitoreo proactivo,
+                        recolección de métricas y visualización de logs.
+                      </p>
+                      <div class="meta-content" style="margin-top: 25px">
+                        <span class="tech-stack">Prometheus</span>
+                        <span class="tech-stack">Grafana</span>
+                      </div>
+                    </div>
+                    <div class="detail-diagram-col">
+                      <div class="node-diagram">
+                        <span>[ PRÓXIMAMENTE: DIAGRAMA E INFORMACIÓN DEL STACK ]</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
               </div>
 
               <!-- Diagrama base que siempre está visible al fondo -->
@@ -237,7 +230,6 @@
                 <span>[ PRÓXIMAMENTE: TOPOLOGÍA DE RED Y ARQUITECTURA LÓGICA ]</span>
               </div>
             </div>
-
             <a
               href="https://github.com/k3r44/Infraestructura-homelab"
               target="_blank"
