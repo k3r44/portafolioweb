@@ -12,7 +12,7 @@
     <meta property="og:title" content="Hector Cu | Systems & Infrastructure" />
     <meta
       property="og:description"
-      content="Ingeniero de Sistemas enfocado en arquitectura cloud, observabilidad y ciberseguridad. 2 POcS on demand sobre GCP, libvirt y Laravel."
+      content="Ingeniero de Sistemas enfocado en infraestructura, observabilidad, ciberseguridad y Edge AI. Homelab Proxmox VE y PoCs en producción."
     />
     <meta
       property="og:url"
@@ -87,7 +87,7 @@
 
               <div class="status-item">
                 <span class="item-label">Infraestructura & Labs:</span>
-                <span class="item-value">Homelab K3R4 (Fase 1) + 2 PoCs On-Demand</span>
+                <span class="item-value">Homelab K3R4 (Proxmox) + PoCs Edge AI / Cloud</span>
               </div>
 
               <div class="status-item">
@@ -128,10 +128,11 @@
 
             <div class="stack-category-card">
               <div class="category-header">
-                <span class="meta-label">// Desarrollo & Backend</span>
+                <span class="meta-label">// Desarrollo, Backend & AI</span>
               </div>
               <div class="tech-stack-container">
                 <span class="tech-badge badge-lang">Python</span>
+                <span class="tech-badge badge-ai">PyTorch</span>
                 <span class="tech-badge badge-lang">Java</span>
                 <span class="tech-badge badge-lang">C#</span>
                 <span class="tech-badge badge-lang">PHP (Laravel)</span>
@@ -177,38 +178,29 @@
             <div class="homelab-container">
               <!-- GRID DE TARJETAS INICIALES -->
               <div class="homelab-grid">
-                <!-- Fase 1: Dev_Web -->
+                <!-- Fase 1: Web_Prod & Business_Sys -->
                 <div class="node-card" data-target="detail-01">
                   <div class="card-header">
                     <span class="phase-label">// fase_01</span>
                     <span class="node-status pending">en_desarrollo</span>
                   </div>
-                  <h4 class="node-title">Dev_Web</h4>
+                  <h4 class="node-title">Web_Prod & Core_Business</h4>
                 </div>
 
-                <!-- Fase 2: Sandbox_IA -->
-                 <div class="node-card" data-target="detail-02">
+                <!-- Fase 2: Observabilidad -->
+                <div class="node-card" data-target="detail-02">
                   <div class="card-header">
                     <span class="phase-label">// fase_02</span>
                     <span class="node-status not-started">proximamente</span>
                   </div>
-                  <h4 class="node-title">Sandbox_IA</h4>
-                </div>
-
-                <!-- Fase 3: Observabilidad -->
-                <div class="node-card" data-target="detail-03">
-                  <div class="card-header">
-                    <span class="phase-label">// fase_03</span>
-                    <span class="node-status not-started">proximamente</span>
-                  </div>
                   <h4 class="node-title">Observabilidad</h4>
                 </div>
-              </div> <!-- ESTE DIV CIERRA EL GRID (Ahora sí incluye las 3) -->
+              </div> <!-- CIERRA EL GRID (2 fases activas) -->
 
               <!-- PANELES DE DETALLE A ANCHO COMPLETO -->
               <div class="details-wrapper">
                 
-                <!-- Detalles Fase 1: Dev_Web -->
+                <!-- Detalles Fase 1: Web_Prod & Core_Business -->
                 <div id="detail-01" class="full-width-detail">
                   <div class="detail-top-right">
                     <span class="node-status status">Fase de desarrollo </span>
@@ -217,16 +209,21 @@
                     <div class="detail-text-col">
                       <p class="meta-content desc-text">
                         <strong>Descripción:</strong> Entorno de despliegue para
-                        aplicaciones web (staging/producción local) enfocado en
-                        estabilidad.
+                        servicios web y aplicaciones de negocio críticas. Aloja el
+                        servidor web del portafolio y el sistema central de inventario
+                        comercial (control de compras, ventas, stock e informes) con
+                        backend e inferencia de IA en PyTorch integrada.
                       </p>
                       <p class="meta-content" style="margin-top: 15px">
-                        <strong>Objetivos:</strong> Simular el entorno de
-                        despliegue para páginas y aplicaciones web.
+                        <strong>Objetivos:</strong> Alojamiento de servicios en producción,
+                        aislamiento de cargas mediante contenedores LXC, publicación segura sin abrir puertos
+                        y ejecución de inferencia de IA local para apoyo a la toma de decisiones.
                       </p>
                       <div class="meta-content" style="margin-top: 25px">
                         <span class="tech-stack">LXC</span>
                         <span class="tech-stack">Nginx</span>
+                        <span class="tech-stack">PyTorch</span>
+                        <span class="tech-stack">SQL / DB</span>
                         <span class="tech-stack">Cloudflare Tunnels</span>
                       </div>
                     </div>
@@ -239,38 +236,8 @@
                   </div>
                 </div>
 
-                <!-- Detalles Fase 2: Sandbox_IA -->
-                 <div id="detail-02" class="full-width-detail">
-                  <div class="detail-top-right">
-                    <span class="node-status not-started">Próximamente</span>
-                  </div>
-
-                  <div class="detail-content-grid">
-                    <div class="detail-text-col">
-                      <p class="meta-content desc-text">
-                        <strong>Descripción:</strong> Entorno aislado
-                        (air-gapped/VLAN separada) para experimentación y
-                        despliegue de modelos LLM locales.
-                      </p>
-                      <p class="meta-content" style="margin-top: 15px">
-                        <strong>Objetivos:</strong> Alojar servicios de IA sin
-                        exposición externa garantizando privacidad de datos.
-                      </p>
-                      <div class="meta-content" style="margin-top: 25px">
-                        <span class="tech-stack">CUDA</span>
-                        <span class="tech-stack">Ollama</span>
-                      </div>
-                    </div>
-                    <div class="detail-diagram-col">
-                      <div class="node-diagram">
-                        <span>[ PRÓXIMAMENTE: DIAGRAMA E INFORMACIÓN DEL SANDBOX IA ]</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Detalles Fase 3: Observabilidad -->
-                <div id="detail-03" class="full-width-detail">
+                <!-- Detalles Fase 2: Observabilidad -->
+                <div id="detail-02" class="full-width-detail">
                   <div class="detail-top-right">
                     <span class="node-status not-started">Próximamente</span>
                   </div>
@@ -284,16 +251,17 @@
                       </p>
                       <p class="meta-content" style="margin-top: 15px">
                         <strong>Objetivos:</strong> Monitoreo proactivo,
-                        recolección de métricas y visualización de logs.
+                        recolección de métricas y visualización de logs de servicios y modelos en producción.
                       </p>
                       <div class="meta-content" style="margin-top: 25px">
                         <span class="tech-stack">Prometheus</span>
                         <span class="tech-stack">Grafana</span>
+                        <span class="tech-stack">Node Exporter</span>
                       </div>
                     </div>
                     <div class="detail-diagram-col">
                       <div class="node-diagram">
-                        <span>[ PRÓXIMAMENTE: DIAGRAMA E INFORMACIÓN DEL STACK ]</span>
+                        <span>[ PRÓXIMAMENTE: DIAGRAMA E INFORMACIÓN DEL STACK DE OBSERVABILIDAD ]</span>
                       </div>
                     </div>
                   </div>
@@ -367,6 +335,105 @@
             =========================================== -->
         <section id="proyectos" aria-labelledby="title-proyectos">
           <h2 id="title-proyectos">/ desarrollos_stand_alone</h2>
+
+          <!-- PROYECTO: AEGIS-µML & AEGISML -->
+          <article class="project-card">
+            <h3 class="project-title">
+              AEGIS-µML & AEGISML — HIDS/NIDS CON INTELIGENCIA ARTIFICIAL EDGE
+              <span class="tag tag-sec">Security</span>
+              <span class="tag tag-ai">AI / ML</span>
+              <span class="tag tag-infra">Infraestructura</span>
+              <span class="tag tag-linux">Linux</span>
+            </h3>
+            <p class="subtitle" style="margin-bottom: 25px">
+              Sistema jerárquico de detección de intrusiones y respuesta a incidentes impulsado por micromodelos de ML cuantizados en el borde y correlación centralizada.
+            </p>
+
+            <div class="project-info" style="margin-bottom: 25px;">
+              <div class="project-section">
+                <span class="meta-label">Problema:</span>
+                <p class="meta-content">
+                  Los sistemas tradicionales basados exclusivamente en firmas no detectan anomalías de día cero o patrones temporales sutiles. A su vez, los modelos convencionales de IA en la nube introducen latencia prohibitiva, riesgos de privacidad y un consumo de cómputo desproporcionado para nodos perimetrales en producción.
+                </p>
+              </div>
+
+              <div class="project-section">
+                <span class="meta-label">Solución:</span>
+                <p class="meta-content">
+                  Arquitectura jerárquica desacoplada en dos capas:
+                </p>
+              </div>
+            </div>
+
+            <!-- Panel de arquitectura con dos columnas equilibradas -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; margin-bottom: 25px;">
+              
+              <!-- Tarjeta 1: Edge Sensors -->
+              <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid #30363d; border-radius: 6px; padding: 18px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; border-bottom: 1px solid #21262d; padding-bottom: 8px;">
+                  <span style="color: #7ee787; font-family: 'Fira Code', monospace; font-size: 0.85rem; font-weight: 600;">// 1. Aegis-µML (Edge / Borde)</span>
+                  <span class="node-status" style="color: #7ee787; border-color: rgba(63, 185, 80, 0.3); font-size: 0.7rem;">&lt; 10 KB | &lt; 1000 params</span>
+                </div>
+                <p class="meta-content" style="font-size: 0.85rem; margin-bottom: 12px; color: #8b949e;">
+                  Sensores ultraligeros cuantizados que analizan telemetría local y emiten un <em>score</em> normalizado (0.0 - 1.0):
+                </p>
+                <ul style="list-style: none; padding: 0; margin: 0; font-family: 'Fira Code', monospace; font-size: 0.8rem; line-height: 1.8;">
+                  <li><code style="color: #79c0ff;">uM-SSH</code> <span style="color: #c9d1d9;">→ Fuerza bruta y anomalías temporales</span></li>
+                  <li><code style="color: #79c0ff;">uM-HTTP</code> <span style="color: #c9d1d9;">→ Entropía, decodificación y estructura web</span></li>
+                  <li><code style="color: #79c0ff;">uM-Syscalls</code> <span style="color: #c9d1d9;">→ Escalada de privilegios y llamadas al kernel</span></li>
+                  <li><code style="color: #79c0ff;">uM-Network</code> <span style="color: #c9d1d9;">→ Escaneos de puertos y movimiento lateral</span></li>
+                </ul>
+              </div>
+
+              <!-- Tarjeta 2: Central Engine -->
+              <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid #30363d; border-radius: 6px; padding: 18px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; border-bottom: 1px solid #21262d; padding-bottom: 8px;">
+                  <span style="color: #ffa657; font-family: 'Fira Code', monospace; font-size: 0.85rem; font-weight: 600;">// 2. AegisML (Orquestador Central)</span>
+                  <span class="node-status pending" style="font-size: 0.7rem;">Motor de Decisión</span>
+                </div>
+                <p class="meta-content" style="font-size: 0.85rem; margin-bottom: 12px; color: #8b949e;">
+                  Concentrador y discriminador de eventos correlacionados con la salud del host:
+                </p>
+                <ul style="list-style: none; padding: 0; margin: 0; font-family: 'Fira Code', monospace; font-size: 0.8rem; line-height: 1.8;">
+                  <li><span style="color: #ffa657;">Ingesta:</span> <span style="color: #c9d1d9;">Recepción bajo contrato estricto (<code style="color: #79c0ff;">alert_schema</code>)</span></li>
+                  <li><span style="color: #ffa657;">Correlación:</span> <span style="color: #c9d1d9;">Cruce temporal con telemetría de <code style="color: #79c0ff;">Node Exporter</code></span></li>
+                  <li><span style="color: #ffa657;">Filtro:</span> <span style="color: #c9d1d9;">Discriminación de falsos positivos en tiempo real</span></li>
+                  <li><span style="color: #ffa657;">Despacho:</span> <span style="color: #c9d1d9;">Notificación y emisión de eventos validados al SOC</span></li>
+                </ul>
+              </div>
+
+            </div>
+
+            <!-- Capacidades y Tecnologías en ancho completo organizado -->
+            <div class="project-info">
+              <div class="project-section">
+                <span class="meta-label">Capacidades:</span>
+                <div class="meta-content">
+                  <span class="tech-stack">Micro-ML / Quantization</span>
+                  <span class="tech-stack">HIDS & NIDS Edge Sensors</span>
+                  <span class="tech-stack">Correlación de Eventos SOC</span>
+                  <span class="tech-stack">Kernel Syscalls Audit</span>
+                  <span class="tech-stack">Telemetría & Detección Temporal</span>
+                  <span class="tech-stack">Homelab Testbed Integration</span>
+                </div>
+              </div>
+
+              <div class="project-section">
+                <span class="meta-label">Tecnologías & Estructura:</span>
+                <p class="meta-content tech-list">
+                  Python, PyTorch, Edge ML Quantization, Linux Kernel Syscalls, Node Exporter, Network Telemetry, Contracts & Integration Testing.
+                </p>
+              </div>
+            </div>
+
+            <a
+              href="https://github.com/k3r44"
+              target="_blank"
+              class="btn-github"
+              style="margin-top: 15px; display: inline-block"
+              >[/>] Ver repositorio y arquitectura en GitHub</a
+            >
+          </article>
 
           <article class="project-card">
             <h3 class="project-title">

@@ -1,16 +1,22 @@
 C4Container
-    title Producción Web — Diagrama de Contenedores
+    title Producción Web & Servicios de Negocio — Diagrama de Contenedores
 
     UpdateLayoutConfig($c4ShapeInRow="1", $c4BoundaryInRow="1")
 
-    Person(usuario, "Usuario", "Persona que accede a un sitio web alojado en la infraestructura")
+    Person(usuario, "Usuario / Cliente", "Acceso al portafolio web o al sistema de gestión comercial")
 
-    System_Ext(cloudflare, "Cloudflare", "Proveedor externo que gestiona DNS, protección perimetral y Cloudflare Tunnel")
+    System_Ext(cloudflare, "Cloudflare", "DNS, protección perimetral DDoS y túnel cifrado (Cloudflare Tunnel)")
 
-    Container(gateway, "Gateway de Producción", "LXC", "Punto de entrada de la infraestructura y enrutamiento hacia los sitios alojados")
+    Container(gateway, "Gateway de Producción", "LXC / Nginx Reverse Proxy", "Punto de entrada perimetral seguro y enrutamiento interno por host/dominio")
 
-    Container(portfolio, "Servidor Web del Portafolio", "LXC", "Aloja y sirve los archivos estáticos del portafolio mediante Nginx")
+    Container(portfolio, "Servidor Web Portafolio", "LXC", "Aloja y sirve los activos estáticos del portafolio mediante Nginx")
 
-    Rel(usuario, cloudflare, "Accede al sitio web", "HTTPS")
-    Rel(cloudflare, gateway, "Establece el túnel", "Cloudflare Tunnel")
-    Rel(gateway, portfolio, "Reenvía las solicitudes", "HTTP")
+    Container(inventario, "Sistema de Gestión e Inventario", "LXC / PyTorch Backend", "Gestión de compras, ventas, catálogo, reportes e inferencia local de IA")
+
+    ContainerDb(database, "Base de Datos de Negocio", "LXC / MariaDB/PostgreSQL", "Persistencia transaccional de ventas, inventario y usuarios")
+
+    Rel(usuario, cloudflare, "Accede mediante HTTPS", "HTTPS / TLS")
+    Rel(cloudflare, gateway, "Túnel cifrado", "Cloudflare Tunnel")
+    Rel(gateway, portfolio, "Enruta tráfico web", "HTTP / 80")
+    Rel(gateway, inventario, "Enruta tráfico de la app", "HTTP / Reverse Proxy")
+    Rel(inventario, database, "Lectura / Escritura", "TCP / SQL")
